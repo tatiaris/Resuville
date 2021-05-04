@@ -157,8 +157,9 @@ export const placeholderInfo = {
 
 export const defaultTemplateAbout = {
   designer: "tatiaris",
-  next: '2',
-  prev: '2',
+  next: '1',
+  prev: '1',
+  tags: [],
   fields: ["full_name","subtitle","city","state","phone_no","email_address","university_start_day","university_end_day","university","university_location","major","sample_courses_description","work_role_1","work_name_1","work_location_1","work_url_1","work_start_day_1","work_end_day_1","work_bullet_1_1","work_bullet_1_2","work_bullet_1_3","work_role_2","work_name_2","work_location_2","work_url_2","work_start_day_2","work_end_day_2","work_bullet_2_1","work_bullet_2_2","work_bullet_2_3","work_role_3","work_name_3","work_location_3","work_url_3","work_start_day_3","work_end_day_3","work_bullet_3_1","work_bullet_3_2","work_bullet_3_3","project_role_1","project_title_1","project_brief_description_1","project_url_1","project_start_day_1","project_end_day_1","project_bullet_1_1","project_bullet_1_2","project_bullet_1_3","project_role_2","project_title_2","project_brief_description_2","project_url_2","project_start_day_2","project_end_day_2","project_bullet_2_1","project_bullet_2_2","project_bullet_2_3","project_role_3","project_title_3","project_brief_description_3","project_url_3","project_start_day_3","project_end_day_3","project_bullet_3_1","project_bullet_3_2","project_bullet_3_3","technical_skills_description","spoken_languages_description","hobbies_description", "personal_url_title", "personal_url", "github_url_title","github_url", "linkedin_url_title","linkedin_url"],
 }
 

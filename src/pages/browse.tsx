@@ -3,7 +3,7 @@ import { Mheader } from '../components/Mheader';
 import { Mnavbar } from '../components/Mnavbar';
 import { MFooter } from '../components/MFooter';
 import { FavoriteBtn } from '../components/FavoriteBtn';
-import { Page, Tag, Badge } from '@geist-ui/react';
+import { Page, Tag, Badge, Note } from '@geist-ui/react';
 import { Download, HeartFill } from '@geist-ui/react-icons';
 import { loadAllDBTemplateData } from '../components/Helper';
 
@@ -40,10 +40,14 @@ const Browse = (): React.ReactNode => {
       <Mheader title="Browse" />
       <Mnavbar theme="light" page="Browse" />
       <Page>
-        <h2>Templates</h2>
+        <h2>Popular Templates</h2>
+        <h3>Resume</h3>
         <div className="template-collection-container">
           {templateCollection}
         </div>
+        <br/>
+        <h3>Cover Letter</h3>
+        <Note type="secondary">Coming Soon</Note>
       </Page>
       <MFooter />
     </>

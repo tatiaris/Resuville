@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/client';
+import { signIn, useSession } from 'next-auth/client';
 import { Mnavbar } from '../../components/Mnavbar';
 import { MFooter } from '../../components/MFooter';
-import { Input, Page, Button, useToasts, Collapse, Tag } from '@geist-ui/react';
+import { Input, Page, Button, useToasts, Collapse, Tag, Note } from '@geist-ui/react';
 import { updateUserDataDB, loadAllUserData, printPDF, downloadHtml, loadDBTemplateData, modifyFavoriteTemplates, loadNewTemplate } from '../../components/Helper';
 import { allTemplateInfo, getTemplate } from '../../components/Templates';
 import { useRouter } from 'next/router';
@@ -71,10 +71,14 @@ export const Template = () => {
             <div className="field-inputs-container">{fieldInputs}</div>
           </Collapse>
         </div>
-        <div>
+        <div style={{ width: "100%" }}>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="flex-wrap-container">
-              {Object.keys(allUserData).length > 0 && templateId in allUserData['liked_templates'] ? (
+              {allUserData['_id'] == "guest" ? (
+                <Button onClick={() => signIn('auth0')} iconRight={<Heart />} auto size="small">
+                  {templateDBInfo['likes']}
+                </Button>
+              ) : Object.keys(allUserData).length > 0 && templateId in allUserData['liked_templates'] ? (
                 <Button
                   onClick={() => modifyFavoriteTemplates(false, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)}
                   iconRight={<HeartFill color="red" />}
@@ -97,11 +101,12 @@ export const Template = () => {
             </div>
           </div>
           <br />
-          <div style={{ background: 'white', boxShadow: '11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff', width: '1030px', height: 'max-content' }}>
+          <div id="resume-page" style={{ background: 'white', boxShadow: '11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff', width: '1030px', height: 'max-content' }}>
             <div style={{ width: '1030px', maxHeight: '1327px' }} contentEditable={templateEdit}>
               {getTemplate(templateId, config)}
             </div>
           </div>
+          <Note type="error" style={{ width: "100%" }}>Please view this page on a wider screen to see a resume preview.</Note>
           <br />
           <div className="flex-wrap-container" style={{ justifyContent: 'right' }}>
             <Button size="small" type="secondary" onClick={() => printPDF(templateDBInfo, setTemplateDBInfo, setToast)}>

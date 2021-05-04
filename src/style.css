@@ -32,7 +32,6 @@ body {
   .template-page main {
     flex-wrap: wrap;
     justify-content: left;
-    overflow: scroll;
   }
 }
 
@@ -108,11 +107,15 @@ body {
 .template-collection-container {
   display: flex;
   justify-content: left;
-  flex-wrap: wrap;
+  padding: 20px 0;
   gap: 25px;
+  overflow-x: visible;
 }
 .tp-thumbnail-container {
   position: relative;
+}
+.tp-thumbnail-img {
+  min-width: 250px;
 }
 .tp-stats-container {
   width: max-content;
@@ -126,21 +129,15 @@ body {
 .tp-thumbnail-img {
   box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
 }
+@media (max-width: 1000px) {
+  .template-collection-container {
+    overflow-x: scroll;
+  }
+}
 /* Browse css END */
 
 
 
-/* Design css BEGIN */
-.sample-data-col {
-  min-width: 300px;
-  margin: 10px !important;
-}
-@media (max-width: 1300px) {
-  .sample-data-col {
-    width: 100% !important;
-  }
-}
-/* Design css END */
 
 /* Template BEGIN */
 .all-inputs-container {
@@ -171,10 +168,9 @@ body {
   width: max-content !important;
 }
 
-@media (max-width: 1300px) {
-  .field-inputs-container {
-    max-height: none;
-    overflow-y: hidden;
+@media (max-width: 1030px) {
+  #resume-page {
+    display: none;
   }
 }
 /* Template END */

@@ -47,12 +47,12 @@ const Home = (): React.ReactNode => {
         <Link href="/browse" color>
           Browse
         </Link>{' '}
-        page, and check out all the templates we offer. Once you&apos;ve found a template that you like, start modifying the required relevant information to your satisfaction. Download the reesume
+        page, and check out all the templates we offer. Once you&apos;ve found a template that you like, start modifying the required relevant information to your satisfaction. Download the resume
         once ready!
         <br />
         <br />
-        <Image.Browser url="https://resuville.com/browse" showFullLink invert>
-          <Image width={540} height={246} style={{ objectFit: 'cover' }} src="/img/get_started.png" />
+        <Image.Browser url="https://resuville.com/t/1" showFullLink invert>
+          <Image width={540} height={260} style={{ objectFit: 'cover' }} src="/img/get_started.png" />
         </Image.Browser>
         <br />
         <br />
