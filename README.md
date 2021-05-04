@@ -12,5 +12,5 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Pages go in src/pages
-Components go in src/components
+Pages go in pages
+Components go in components
