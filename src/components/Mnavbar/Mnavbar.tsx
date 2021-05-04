@@ -63,7 +63,6 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
               </ButtonDropdown.Item>
               <ButtonDropdown.Item onClick={() => navigatePath('/')}>Home</ButtonDropdown.Item>
               <ButtonDropdown.Item onClick={() => navigatePath('/browse')}>Browse</ButtonDropdown.Item>
-              <ButtonDropdown.Item onClick={() => navigatePath('/design')}>Design</ButtonDropdown.Item>
             </ButtonDropdown>
           </div>
         </div>
