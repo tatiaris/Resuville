@@ -106,7 +106,7 @@ export const Template = () => {
               {getTemplate(templateId, config)}
             </div>
           </div>
-          <Note type="error" style={{ width: "100%" }}>Please view this page on a wider screen to see a resume preview.</Note>
+          <Note id="small-screen-note" type="error" style={{ width: "100%" }}>Please view this page on a wider screen to see a resume preview.</Note>
           <br />
           <div className="flex-wrap-container" style={{ justifyContent: 'right' }}>
             <Button size="small" type="secondary" onClick={() => printPDF(templateDBInfo, setTemplateDBInfo, setToast)}>
