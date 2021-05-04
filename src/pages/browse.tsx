@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Mheader } from '../components/Mheader';
 import { Mnavbar } from '../components/Mnavbar';
 import { MFooter } from '../components/MFooter';
-import { FavoriteBtn } from '../components/FavoriteBtn';
-import { Page, Tag, Badge, Note } from '@geist-ui/react';
+import { Page, Badge, Note } from '@geist-ui/react';
 import { Download, HeartFill } from '@geist-ui/react-icons';
 import { loadAllDBTemplateData } from '../components/Helper';
 
