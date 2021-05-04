@@ -18,6 +18,7 @@ export const Template = () => {
   const [, setToast] = useToasts();
   const [templateDBInfo, setTemplateDBInfo] = useState(defaultTemplateDBInfo);
   const [templateInfo, setTemplateInfo] = useState(defaultTemplateAbout);
+  const [resumePageScale, setResumePageScale] = useState(1);
 
   const [config, setConfig] = useState(defaultTemplateConfig);
   const updateConfig = (key, val) => setConfig({ ...config, [key]: val });
@@ -52,6 +53,14 @@ export const Template = () => {
     setTemplateInfo(allTemplateInfo[templateId].about);
     loadDBTemplateData(templateId, setTemplateDBInfo);
   }, [templateId]);
+
+  const calculatePageScale = () => {
+    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > 1140) ? setResumePageScale(1) : setResumePageScale(document.getElementsByTagName('html')[0].clientWidth/1140);
+  }
+  useEffect(() => {
+    if (window) window.onresize = calculatePageScale;
+    if (document) calculatePageScale();
+  }, [])
 
   return (
     <>
@@ -101,12 +110,11 @@ export const Template = () => {
             </div>
           </div>
           <br />
-          <div id="resume-page" style={{ background: 'white', boxShadow: '11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff', width: '1030px', height: 'max-content' }}>
+          <div id="resume-page" style={{ background: 'white', boxShadow: '11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff', width: '1030px', height: 'max-content', scale: `${resumePageScale}`, transformOrigin: "top left" }}>
             <div style={{ width: '1030px', maxHeight: '1327px' }} contentEditable={templateEdit}>
               {getTemplate(templateId, config)}
             </div>
           </div>
-          <Note id="small-screen-note" type="error" style={{ width: "100%" }}>Please view this page on a wider screen to see a resume preview.</Note>
           <br />
           <div className="flex-wrap-container" style={{ justifyContent: 'right' }}>
             <Button size="small" type="secondary" onClick={() => printPDF(templateDBInfo, setTemplateDBInfo, setToast)}>

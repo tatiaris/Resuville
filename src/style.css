@@ -168,15 +168,4 @@ body {
   width: max-content !important;
 }
 
-#small-screen-note {
-  display: none;
-}
-@media (max-width: 1030px) {
-  #resume-page {
-    display: none;
-  }
-  #small-screen-note {
-    display: block;
-  }
-}
 /* Template END */

@@ -54,7 +54,7 @@ handler.put(async (req, res) => {
   let updatedUserInfo = req.body.updatedObject;
   delete updatedUserInfo['_id'];
 
-  if (session) {
+  if (session && typeof updatedUserInfo.data !== "undefined" && Object.keys(updatedUserInfo.data).length > 0) {
     try {
       await req.db.collection('users').updateOne({ email: session.user.email }, { $set: updatedUserInfo }, { upsert: true });
       responseData = {
