@@ -1,0 +1,165 @@
+body {
+  background-color: white;
+}
+.template-page {
+  margin: 0 !important;
+  width: 100% !important;
+  padding: 22pt !important;
+}
+.template-page main {
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* flex-wrap: wrap; */
+}
+@media (max-width: 1300px) {
+  body {
+    overflow-x: scroll !important;
+  }
+  .template-page main {
+    flex-wrap: wrap;
+    justify-content: left;
+    overflow: scroll;
+  }
+}
+
+/* Navbar css BEGIN */
+.navbar-row {
+  padding: 10px 20px;
+  -webkit-justify-content: space-between !important;
+  -moz-box-pack: justify !important;
+  justify-content: space-between !important;
+  width: 100%;
+  background: white;
+}
+.left-nav-container {
+  display: flex;
+}
+.right-nav-container {
+  display: flex;
+}
+.hamburger-nav {
+  display: none;
+}
+@media (max-width: 550px) {
+  .left-links-container {
+    display: none;
+  }
+  .hamburger-nav {
+    display: block;
+    margin-left: 10px;
+  }
+}
+.left-nav-container > .brand-name {
+  font-weight: 500;
+}
+.left-nav-container > .brand-name:hover {
+  background-color: transparent !important;
+}
+.left-nav-container  a {
+  color: black !important;
+  margin-right: 10px;
+}
+.left-nav-container a.active {
+  background-color: rgba(50, 50, 50, 0.1);
+}
+.left-nav-container a:hover {
+  background-color: rgba(50, 50, 50, 0.1) !important;
+}
+/* Navbar css END */
+/* Footer css BEGIN */
+.copyright-statement > a {
+  color: #666666;
+}
+.copyright-statement > a:hover {
+  text-decoration: underline;
+}
+/* Footer css END */
+/* Browse css BEGIN */
+.browse-page-container {
+  width: calc(100% - 10px) !important;
+}
+@media (max-width: 1050px) {
+  .resume-col {
+    overflow: scroll;
+  }
+}
+.user-data-col {
+  min-width: 300px;
+  margin: 10px !important;
+}
+@media (max-width: 1300px) {
+  .user-data-col {
+    width: 100% !important;
+  }
+  .user-data-col > .data-inputs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.data-inputs-container {
+  max-height: 1350px;
+  overflow: scroll;
+}
+.resume-col {
+  width: 100%;
+  max-width: 1030px;
+  margin: 10px !important;
+}
+.user-data-field {
+  margin-top: 5px;
+}
+.user-data-field > span {
+  min-width: 150px;
+  width: 200px;
+}
+/* Browse css END */
+/* Design css BEGIN */
+.sample-data-col {
+  min-width: 300px;
+  margin: 10px !important;
+}
+@media (max-width: 1300px) {
+  .sample-data-col {
+    width: 100% !important;
+  }
+}
+/* Design css END */
+
+/* Template BEGIN */
+.all-inputs-container {
+  min-width: 200px;
+}
+.variable-inputs-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.field-inputs-container {
+  display: flex;
+  /* justify-content: left; */
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+.variable-label {
+  margin-right: 10px;
+  line-height: calc(1.688 * 16pt);
+}
+.flex-wrap-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1300px) {
+  .field-inputs-container {
+    max-height: none;
+    overflow-y: hidden;
+  }
+}
+/* Template END */
