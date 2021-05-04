@@ -9,6 +9,11 @@ export const insertOneObject = async (req, collection, params) => {
 };
 
 export const updateOneObject = async (req, collection, query, updatedObj, upsert = true) => {
-  const returnObj = req.db.collection(collection).update(query, { $set: updatedObj }, { upsert: upsert });
+  const returnObj = await req.db.collection(collection).update(query, { $set: updatedObj }, { upsert: upsert });
   return returnObj;
 };
+
+export const getAllObjects = async (req, collection) => {
+  const returnObj = await req.db.collection(collection).find().toArray();
+  return returnObj;
+}

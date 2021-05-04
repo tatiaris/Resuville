@@ -1,14 +1,19 @@
 import { ObjectID } from 'mongodb';
 import nextConnect from 'next-connect';
 import middleware from '../../../middleware/database';
-import { findOneObject, updateOneObject } from './helper';
+import { findOneObject, getAllObjects, updateOneObject } from './helper';
 
 const handler = nextConnect();
 handler.use(middleware);
 
 handler.get(async (req, res) => {
-  const templateData = await findOneObject(req, 'template_data', { [req.query.filter]: req.query[req.query.filter] });
-  res.json(templateData);
+  if (req.query.amount == "single") {
+    const templateData = await findOneObject(req, 'template_data', { [req.query.filter]: req.query[req.query.filter] });
+    res.json(templateData);
+  } else if (req.query.amount == "all") {
+    const templateData = await getAllObjects(req, 'template_data')
+    res.json(templateData);
+  }
 });
 
 handler.put(async (req, res) => {

@@ -90,6 +90,9 @@ body {
   background-color: rgba(50, 50, 50, 0.1) !important;
 }
 /* Navbar css END */
+
+
+
 /* Footer css BEGIN */
 .copyright-statement > a {
   color: #666666;
@@ -98,46 +101,35 @@ body {
   text-decoration: underline;
 }
 /* Footer css END */
+
+
+
 /* Browse css BEGIN */
-.browse-page-container {
-  width: calc(100% - 10px) !important;
+.template-collection-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 25px;
 }
-@media (max-width: 1050px) {
-  .resume-col {
-    overflow: scroll;
-  }
+.tp-thumbnail-container {
+  position: relative;
 }
-.user-data-col {
-  min-width: 300px;
-  margin: 10px !important;
+.tp-stats-container {
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: 0%;
+  right: 10px;
+  padding: 5px;
+  background-color: peachpuff;
 }
-@media (max-width: 1300px) {
-  .user-data-col {
-    width: 100% !important;
-  }
-  .user-data-col > .data-inputs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-}
-.data-inputs-container {
-  max-height: 1350px;
-  overflow: scroll;
-}
-.resume-col {
-  width: 100%;
-  max-width: 1030px;
-  margin: 10px !important;
-}
-.user-data-field {
-  margin-top: 5px;
-}
-.user-data-field > span {
-  min-width: 150px;
-  width: 200px;
+.tp-thumbnail-img {
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
 }
 /* Browse css END */
+
+
+
 /* Design css BEGIN */
 .sample-data-col {
   min-width: 300px;
@@ -173,6 +165,10 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+.big-icon svg {
+  height: max-content !important;
+  width: max-content !important;
 }
 
 @media (max-width: 1300px) {

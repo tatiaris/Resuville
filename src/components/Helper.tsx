@@ -1,3 +1,5 @@
+import { allTemplateInfo } from "./Templates";
+
 /**
  * Style text based on identifiers:
  * some *bolded* text is *here*
@@ -121,8 +123,14 @@ export const loadAllUserData = async (templateInfo, setAllUserData, setUserInfo)
   }
 };
 
+export const loadAllDBTemplateData = async (setAllTemplateDBInfo) => {
+  const res = await fetch(`/api/templates?amount=all`);
+  const allTemplateDBData = await res.json();
+  setAllTemplateDBInfo(allTemplateDBData);
+}
+
 export const loadDBTemplateData = async (templateId, setTemplateDBInfo) => {
-  const templateInfoRes = await fetch(`/api/templates?filter=templateId&templateId=${templateId}`);
+  const templateInfoRes = await fetch(`/api/templates?amount=single&filter=templateId&templateId=${templateId}`);
   const templateDBData = await templateInfoRes.json();
   setTemplateDBInfo(templateDBData);
 };
@@ -176,3 +184,49 @@ export const incrementTemplateDownloads = (templateDBInfo, setTemplateDBInfo, se
   updateDatabase('templates', templateDBInfo, setToast, false);
   setTemplateDBInfo(templateDBInfo);
 };
+
+export const loadNewTemplate = (templateId, setTemplateInfo) => {
+  console.log(`loading new template ${templateId}`);
+  setTemplateInfo(allTemplateInfo[templateId].about)
+  window.location.replace(`/t/${templateId}`);
+}
+
+/**
+ * Generates and downloads the pdf created using the template output
+ * multiple ways to do this, but currently just sending a request
+ * to my own html2pdf api comtaining the code to be converted.
+ */
+// const generatePDF = async () => {
+//   launchBasicToast('Generating PDF...');
+//   if (document) {
+//     const resumeElement = document.getElementById('code-output');
+
+//     // method 2: use html-pdf-node to generate pdf
+//     try {
+//       const data = await axios({
+//         method: 'POST',
+//         url: 'https://html2pdfapi.herokuapp.com/',
+//         // url: 'http://localhost:8000/',
+//         headers: {
+//           Accept: '*/*',
+//           'Access-Control-Allow-Origin': '*'
+//         },
+//         data: {
+//           raw_html: encodeURIComponent(resumeElement.innerHTML),
+//           pageHeight: resumeElement.offsetHeight
+//         },
+//         responseType: 'blob'
+//       });
+//       const link = document.createElement('a');
+//       link.href = URL.createObjectURL(data.data);
+//       link.download = 'resuville.pdf';
+//       document.body.append(link);
+//       link.click();
+//       link.remove();
+//       setTimeout(() => URL.revokeObjectURL(link.href), 7000);
+//       incrementTemplateDownloadCount();
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   }
+// };
