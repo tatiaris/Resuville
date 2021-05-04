@@ -2,24 +2,10 @@ import nextConnect from 'next-connect';
 import middleware from '../../../middleware/database';
 import { getSession } from 'next-auth/client';
 import guestData from './guest_data';
+import { findOneObject, insertOneObject, updateOneObject } from './helper';
 
 const handler = nextConnect();
 handler.use(middleware);
-
-const updateOneObject = async (req, collection, query, updatedObj, upsert = true) => {
-  const returnObj = req.db.collection(collection).update(query, { $set: updatedObj }, { upsert: upsert });
-  return returnObj;
-};
-
-const findOneObject = async (req, collection, params) => {
-  const returnObj = await req.db.collection(collection).findOne(params);
-  return returnObj;
-};
-
-const insertOneObject = async (req, collection, params) => {
-  const returnObj = await req.db.collection(collection).insertOne(params);
-  return returnObj;
-};
 
 const getUserData = async (req) => {
   const sessionData = await getSession({ req });
@@ -33,10 +19,9 @@ const getUserData = async (req) => {
           email: sessionData.user.email,
           username: sessionData.user.email.split('@')[0],
           is_admin: false,
-          is_designer: false,
           total_downloads: 0,
-          liked_templates: [],
-          used_templates: [],
+          liked_templates: {},
+          used_templatees: {},
           data: guestData.data
         });
         userData = await findOneObject(req, 'users', { email: sessionData.user.email });
@@ -66,7 +51,7 @@ handler.get(async (req, res) => {
 handler.put(async (req, res) => {
   let responseData = { success: false, message: 'Invalid PUT Request' };
   const session = await getSession({ req });
-  let updatedUserInfo = req.body.userInfo;
+  let updatedUserInfo = req.body.updatedObject;
   delete updatedUserInfo['_id'];
 
   if (session) {
@@ -74,13 +59,13 @@ handler.put(async (req, res) => {
       await req.db.collection('users').updateOne({ email: session.user.email }, { $set: updatedUserInfo }, { upsert: true });
       responseData = {
         success: true,
-        message: 'Your data was successfully updated!'
+        message: 'Your data has been updated!'
       };
     } catch (error) {
       console.log('update failed', error);
       responseData = {
         success: false,
-        message: 'Sorry! We encountered an unexpected error trying to update your profile.'
+        message: 'Sorry! We encountered an unexpected error trying to update your data.'
       };
     }
   }

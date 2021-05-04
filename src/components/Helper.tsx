@@ -1,13 +1,3 @@
-const getMinGreaterThanZero = lst => {
-  let mgz = 10000000;
-  for (let i = 0; i < lst.length; i++) {
-    if (lst[i] > -1 && lst[i] < mgz) {
-      mgz = lst[i];
-    }
-  }
-  return mgz;
-}
-
 /**
  * Style text based on identifiers:
  * some *bolded* text is *here*
@@ -16,18 +6,18 @@ const getMinGreaterThanZero = lst => {
  *    ==> <>some <i>italic</i> text is <i>here</i></>
  * some _*fancy*_ text is _*here*_
  *    ==> <>some <span style={{ fontWeight: boldWeight }}><i>fancy</i></span> text is <span style={{ fontWeight: boldWeight }}><i>here</i></span></>
- * 
+ *
  * @param text {string}
  * @param boldWeight {int}
  */
 export const styleText = (text, boldWeight) => {
-  let jsxElements = [];
+  const jsxElements = [];
   let c = 0;
   try {
     while (text.indexOf('_') > -1 || text.indexOf('*') > -1) {
       c++;
-      const italicStartIndex = text.indexOf('_')
-      const boldStartIndex = text.indexOf('*')
+      const italicStartIndex = text.indexOf('_');
+      const boldStartIndex = text.indexOf('*');
       let plainTextEndIndex = 0;
       let styleType = '';
 
@@ -52,11 +42,16 @@ export const styleText = (text, boldWeight) => {
       const plainText = text.substr(0, plainTextEndIndex);
       text = text.substr(plainTextEndIndex + 1);
       const fancyTextEndIndex = text.indexOf(styleType);
-      let fancyText = text.substr(0, fancyTextEndIndex);
+      const fancyText = text.substr(0, fancyTextEndIndex);
       text = text.substr(fancyTextEndIndex + 1);
-      
+
       jsxElements.push(<span key={`plain-text-${c}`}>{plainText}</span>);
-      if (styleType == '*') jsxElements.push(<span key={`fancy-text-${c}`} style={{ fontWeight: boldWeight }}>{fancyText}</span>);
+      if (styleType == '*')
+        jsxElements.push(
+          <span key={`fancy-text-${c}`} style={{ fontWeight: boldWeight }}>
+            {fancyText}
+          </span>
+        );
       else if (styleType == '_') jsxElements.push(<i key={`fancy-text-${c}`}>{styleText(fancyText, boldWeight)}</i>);
     }
     jsxElements.push(<span key={`plain-text-${c + 1}`}>{text}</span>);
@@ -66,9 +61,9 @@ export const styleText = (text, boldWeight) => {
   }
 
   return jsxElements;
-}
+};
 
-const launchSuccessToast = (setToast, msg) => setToast({ text: msg, type: 'success', delay: 3000 });
+const launchSuccessToast = (setToast, msg) => setToast({ text: msg, type: 'warning', delay: 3000 });
 const launchFailToast = (setToast, msg) => setToast({ text: msg, type: 'error', delay: 3000 });
 /**
  * sends a user a positive/negative notification
@@ -77,7 +72,7 @@ const launchFailToast = (setToast, msg) => setToast({ text: msg, type: 'error', 
  */
 const sendNotification = (setToast, intent, msg) => {
   console.log('sending notification');
-  
+
   if (intent) launchSuccessToast(setToast, msg);
   else launchFailToast(setToast, msg);
 };
@@ -85,24 +80,26 @@ const sendNotification = (setToast, intent, msg) => {
 /**
  * updates the user's info in the database
  */
-export const updateUserDataDB = (allUserData, userInfo, setToast) => {
-  allUserData.data = userInfo;
-  const data = { userInfo: allUserData };
-
-  fetch('/api/users', {
+export const updateDatabase = (objectType, updatedObject, setToast, notify = false) => {
+  fetch(`/api/${objectType}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify({ updatedObject: updatedObject })
   })
-  .then((response) => response.json())
-  .then((data) => {
-    sendNotification(setToast, data.success, data.message);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+    .then((response) => response.json())
+    .then((data) => {
+      if (notify) sendNotification(setToast, data.success, data.message);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+};
+
+export const updateUserDataDB = (allUserData, userInfo, setToast, notify = false) => {
+  allUserData.data = userInfo;
+  updateDatabase('users', allUserData, setToast, true);
 };
 
 /**
@@ -117,20 +114,24 @@ export const loadAllUserData = async (templateInfo, setAllUserData, setUserInfo)
   if (userData) {
     for (let i = 0; i < templateInfo.fields.length; i++) {
       const f = templateInfo.fields[i];
-      if (!(f in userData.data)) userData.data[f] = "";
+      if (!(f in userData.data)) userData.data[f] = '';
     }
     setAllUserData(userData);
     setUserInfo(userData.data);
   }
 };
 
+export const loadDBTemplateData = async (templateId, setTemplateDBInfo) => {
+  const templateInfoRes = await fetch(`/api/templates?filter=templateId&templateId=${templateId}`);
+  const templateDBData = await templateInfoRes.json();
+  setTemplateDBInfo(templateDBData);
+};
+
 /**
  * allows the user to print/download their resume through the browser
  */
-export const printPDF = () => {
+export const printPDF = (templateDBInfo, setTemplateDBInfo, setToast) => {
   const resumeElement = document.getElementById('resume-container');
-  // incrementTemplateDownloadCount();
-
   // method 1: no api, just let the browser print
   const raw_html = resumeElement.outerHTML;
   const w = window.open();
@@ -138,6 +139,7 @@ export const printPDF = () => {
   w.focus();
   w.print();
   w.close();
+  incrementTemplateDownloads(templateDBInfo, setTemplateDBInfo, setToast);
 };
 
 /**
@@ -153,4 +155,24 @@ export const downloadHtml = () => {
   document.body.appendChild(element);
   element.click();
   document.body.removeChild(element);
-}
+};
+
+export const modifyFavoriteTemplates = (add, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast) => {
+  if (add) {
+    allUserData.liked_templates[templateId] = true;
+    templateDBInfo['likes'] += 1;
+  } else {
+    delete allUserData.liked_templates[templateId];
+    templateDBInfo['likes'] -= 1;
+  }
+  updateDatabase('users', allUserData, setToast, true);
+  updateDatabase('templates', templateDBInfo, setToast, false);
+  setAllUserData(allUserData);
+  setTemplateDBInfo(templateDBInfo);
+};
+
+export const incrementTemplateDownloads = (templateDBInfo, setTemplateDBInfo, setToast) => {
+  templateDBInfo['downloads'] += 1;
+  updateDatabase('templates', templateDBInfo, setToast, false);
+  setTemplateDBInfo(templateDBInfo);
+};

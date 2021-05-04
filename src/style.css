@@ -1,6 +1,18 @@
 body {
   background-color: white;
 }
+.logo-img {
+  margin: 0 !important;
+}
+.logo-about-section {
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.content-about-section {
+  display: none;
+}
 .template-page {
   margin: 0 !important;
   width: 100% !important;
@@ -24,6 +36,15 @@ body {
   }
 }
 
+@media (max-width: 650px) {
+  .logo-about-section {
+    display: none;
+  }
+  .content-about-section {
+    display: block;
+  }
+}
+
 /* Navbar css BEGIN */
 .navbar-row {
   padding: 10px 20px;
@@ -32,6 +53,7 @@ body {
   justify-content: space-between !important;
   width: 100%;
   background: white;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
 }
 .left-nav-container {
   display: flex;
@@ -140,11 +162,8 @@ body {
 }
 .field-inputs-container {
   display: flex;
-  /* justify-content: left; */
   gap: 10px;
   flex-wrap: wrap;
-  max-height: 1000px;
-  overflow-y: scroll;
 }
 .variable-label {
   margin-right: 10px;
