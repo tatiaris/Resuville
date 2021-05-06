@@ -55,7 +55,7 @@ export const Template = () => {
   }, [templateId]);
 
   const calculatePageScale = () => {
-    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > 1140) ? setResumePageScale(1) : setResumePageScale(document.getElementsByTagName('html')[0].clientWidth/1140);
+    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > 1090) ? setResumePageScale(1) : setResumePageScale((document.getElementsByTagName('html')[0].clientWidth - 60)/1030);
   }
   useEffect(() => {
     if (window) window.onresize = calculatePageScale;
