@@ -8,6 +8,8 @@ import { ConfigInputsProps } from './interfaces';
  * Footer component
  */
 const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
+  const initialRegularFontSize = props.config.regularFontSize.substr(0, props.config.regularFontSize.length - 2);
+  const initialHeadingFontSize = props.config.headingFontSize.substr(0, props.config.headingFontSize.length - 2);
   return (
     <Collapse shadow title="Template Settings" subtitle="Further customize your template">
       <Button size="small" type="secondary">
@@ -28,11 +30,11 @@ const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
         </div>
         <div>
           <span className="variable-label">Regular Font Size:</span>
-          <Input placeholder="12" labelRight="pt" initialValue={`12`} onChange={(e) => props.updateConfig('regularFontSize', `${e.target.value}pt`)}></Input>
+          <Input placeholder="12" labelRight="pt" initialValue={initialRegularFontSize} onChange={(e) => props.updateConfig('regularFontSize', `${e.target.value}pt`)}></Input>
         </div>
         <div>
           <span className="variable-label">Heading Font Size:</span>
-          <Input placeholder="16" labelRight="pt" initialValue={`16`} onChange={(e) => props.updateConfig('headingFontSize', `${e.target.value}pt`)}></Input>
+          <Input placeholder="16" labelRight="pt" initialValue={initialHeadingFontSize} onChange={(e) => props.updateConfig('headingFontSize', `${e.target.value}pt`)}></Input>
         </div>
         <div>
           <span className="variable-label">Regular Font Weight:</span>

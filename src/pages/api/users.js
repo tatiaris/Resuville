@@ -1,21 +1,19 @@
 import nextConnect from 'next-connect';
-import middleware from '../../../middleware/database';
 import { getSession } from 'next-auth/client';
 import guestData from './guest_data';
 import { findOneObject, insertOneObject, updateOneObject } from './helper';
 
 const handler = nextConnect();
-handler.use(middleware);
 
 const getUserData = async (req) => {
   const sessionData = await getSession({ req });
   let userData = { success: false, message: 'Could not find user data' };
   if (req.query.type == 'self') {
     if (sessionData) {
-      userData = await findOneObject(req, 'users', { email: sessionData.user.email });
+      userData = await findOneObject('users', { email: sessionData.user.email });
       if (!userData) {
         // write some code to come up with a unique username using the email, temporarily fixed
-        await insertOneObject(req, 'users', {
+        await insertOneObject('users', {
           email: sessionData.user.email,
           username: sessionData.user.email.split('@')[0],
           is_admin: false,
@@ -24,14 +22,14 @@ const getUserData = async (req) => {
           used_templatees: {},
           data: guestData.data
         });
-        userData = await findOneObject(req, 'users', { email: sessionData.user.email });
+        userData = await findOneObject('users', { email: sessionData.user.email });
       }
     } else {
       userData = guestData;
     }
   } else if (req.query.type == 'other') {
     userData = guestData;
-    const otherUserData = await findOneObject(req, 'users', { username: req.query.username });
+    const otherUserData = await findOneObject('users', { username: req.query.username });
     userData.data = otherUserData.data;
   } else if (req.query.type == 'multiple') {
     // implement get request for when multiple users data is requested
@@ -56,7 +54,7 @@ handler.put(async (req, res) => {
 
   if (session && typeof updatedUserInfo.data !== "undefined" && Object.keys(updatedUserInfo.data).length > 0) {
     try {
-      await req.db.collection('users').updateOne({ email: session.user.email }, { $set: updatedUserInfo }, { upsert: true });
+      await updateOneObject('users', { email: session.user.email }, updatedUserInfo)
       responseData = {
         success: true,
         message: 'Your data has been updated!'

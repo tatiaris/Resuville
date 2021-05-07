@@ -1,6 +1,11 @@
+/* GENERAL SETTINGS START */
 body {
   background-color: white;
 }
+/* GENERAL SETTINGS END */
+
+
+
 .logo-img {
   margin: 0 !important;
 }
@@ -140,6 +145,12 @@ body {
 
 
 /* Template BEGIN */
+#resume-container ul li::before {
+	content: none;
+}
+#resume-container ul, ol {
+	list-style-type: initial;
+}
 .all-inputs-container {
   min-width: 200px;
 }

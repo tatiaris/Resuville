@@ -51,6 +51,7 @@ export const Template = () => {
   useEffect(() => {
     console.log('setting templateInfo', templateId);
     setTemplateInfo(allTemplateInfo[templateId].about);
+    setConfig(allTemplateInfo[templateId].defaultConfig);
     loadDBTemplateData(templateId, setTemplateDBInfo);
   }, [templateId]);
 
