@@ -163,7 +163,19 @@ body {
 #geist-ui-tooltip .inner {
   width: max-content;
 }
-
+.req-field-inp-container {
+  position: relative;
+}
+.req-field-title {
+  position: absolute;
+  background: white;
+  color: #388ff5;
+  top: -8px;
+  line-height: 0.7;
+  font-size: 0.7rem;
+  left: 10px;
+  padding: 3px;
+}
 #resume-container ul li::before {
 	content: none;
 }

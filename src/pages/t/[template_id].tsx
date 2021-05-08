@@ -41,7 +41,12 @@ export const Template = () => {
    * When userInfo is loaded, update all field values
    */
   useEffect(() => {
-    setFieldInputs(templateInfo.fields.map((fName, i) => <Input key={`req-field-${i}`} name={fName} placeholder={fName} initialValue={userInfo[fName]} onChange={(e) => updateUserInfoField(e)} />));
+    setFieldInputs(templateInfo.fields.map((fName, i) => (
+      <div className="req-field-inp-container">
+        <Input key={`req-field-${i}`} name={fName} placeholder={fName} initialValue={userInfo[fName]} onChange={(e) => updateUserInfoField(e)} />
+        <span className="req-field-title">{fName}</span>
+      </div>
+    )));
     updateConfig('userInfo', userInfo);
   }, [userInfo]);
 
