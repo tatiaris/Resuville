@@ -40,51 +40,51 @@ const template1 = (config) => {
           <h4 style={{ borderBottom: "2px solid black", fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px" }}>
             Professional Experience
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_role_1']}</span>, {config.styledUserInfo['work_name_1']}, {config.styledUserInfo['work_location_1']} (<a href={`https://${config.styledUserInfo['work_url_1']}`}>{config.styledUserInfo['work_url_1']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_1']} - {config.styledUserInfo['work_end_day_1']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_role']}</span>, {config.styledUserInfo['work_1_name']}, {config.styledUserInfo['work_1_location']} (<a href={`https://${config.styledUserInfo['work_1_url']}`}>{config.styledUserInfo['work_1_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_1_start_day']} - {config.styledUserInfo['work_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_role_2']}</span>, {config.styledUserInfo['work_name_2']}, {config.styledUserInfo['work_location_2']} (<a href={`https://${config.styledUserInfo['work_url_2']}`}>{config.styledUserInfo['work_url_2']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_2']} - {config.styledUserInfo['work_end_day_2']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_role']}</span>, {config.styledUserInfo['work_2_name']}, {config.styledUserInfo['work_2_location']} (<a href={`https://${config.styledUserInfo['work_2_url']}`}>{config.styledUserInfo['work_2_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_2_start_day']} - {config.styledUserInfo['work_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_role_3']}</span>, {config.styledUserInfo['work_name_3']}, {config.styledUserInfo['work_location_3']} (<a href={`https://${config.styledUserInfo['work_url_3']}`}>{config.styledUserInfo['work_url_3']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_3']} - {config.styledUserInfo['work_end_day_3']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_role']}</span>, {config.styledUserInfo['work_3_name']}, {config.styledUserInfo['work_3_location']} (<a href={`https://${config.styledUserInfo['work_3_url']}`}>{config.styledUserInfo['work_3_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_3_start_day']} - {config.styledUserInfo['work_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_3']}</li>
           </ul><br/>
 
           <h4 style={{ borderBottom: "2px solid black", fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px" }}>
             Projects
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_role_1']}</span>, {config.styledUserInfo['project_title_1']}, {config.styledUserInfo['project_brief_description_1']} (<a href={`https://${config.styledUserInfo['project_url_1']}`}>{config.styledUserInfo['project_url_1']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['project_start_day_1']} - {config.styledUserInfo['project_end_day_1']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_role']}</span>, {config.styledUserInfo['project_1_title']}, {config.styledUserInfo['project_1_brief_description']} (<a href={`https://${config.styledUserInfo['project_1_url']}`}>{config.styledUserInfo['project_1_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['project_1_start_day']} - {config.styledUserInfo['project_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_role_2']}</span>, {config.styledUserInfo['project_title_2']}, {config.styledUserInfo['project_brief_description_2']} (<a href={`https://${config.styledUserInfo['project_url_2']}`}>{config.styledUserInfo['project_url_2']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['project_start_day_2']} - {config.styledUserInfo['project_end_day_2']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_role']}</span>, {config.styledUserInfo['project_2_title']}, {config.styledUserInfo['project_2_brief_description']} (<a href={`https://${config.styledUserInfo['project_2_url']}`}>{config.styledUserInfo['project_2_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['project_2_start_day']} - {config.styledUserInfo['project_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_role_3']}</span>, {config.styledUserInfo['project_title_3']}, {config.styledUserInfo['project_brief_description_3']} (<a href={`https://${config.styledUserInfo['project_url_3']}`}>{config.styledUserInfo['project_url_3']}</a>)
-          <span style={{ float: "right" }}>{config.styledUserInfo['project_start_day_3']} - {config.styledUserInfo['project_end_day_3']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_role']}</span>, {config.styledUserInfo['project_3_title']}, {config.styledUserInfo['project_3_brief_description']} (<a href={`https://${config.styledUserInfo['project_3_url']}`}>{config.styledUserInfo['project_3_url']}</a>)
+          <span style={{ float: "right" }}>{config.styledUserInfo['project_3_start_day']} - {config.styledUserInfo['project_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_3_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_3_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_3_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_3_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_3_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_3_bullet_3']}</li>
           </ul><br/>
 
           <h4 style={{ borderBottom: "2px solid black", fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px" }}>
@@ -143,46 +143,46 @@ const template2 = (config) => {
           <h4 style={{ fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, margin: "0px", marginBottom: "0px" }}>
             WORK EXPERIENCE
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_name_1']}</span> / {config.styledUserInfo['work_role_1']}, {config.styledUserInfo['work_location_1']}
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_1']} - {config.styledUserInfo['work_end_day_1']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_name']}</span> / {config.styledUserInfo['work_1_role']}, {config.styledUserInfo['work_1_location']}
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_1_start_day']} - {config.styledUserInfo['work_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_1_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_role_2']}</span>, {config.styledUserInfo['work_name_2']}, {config.styledUserInfo['work_location_2']}
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_2']} - {config.styledUserInfo['work_end_day_2']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_role']}</span>, {config.styledUserInfo['work_2_name']}, {config.styledUserInfo['work_2_location']}
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_2_start_day']} - {config.styledUserInfo['work_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_2_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_role_3']}</span>, {config.styledUserInfo['work_name_3']}, {config.styledUserInfo['work_location_3']}
-          <span style={{ float: "right" }}>{config.styledUserInfo['work_start_day_3']} - {config.styledUserInfo['work_end_day_3']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_role']}</span>, {config.styledUserInfo['work_3_name']}, {config.styledUserInfo['work_3_location']}
+          <span style={{ float: "right" }}>{config.styledUserInfo['work_3_start_day']} - {config.styledUserInfo['work_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['work_bullet_3_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_3']}</li>
           </ul><br/>
 
           <h4 style={{ fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, margin: "0px", marginBottom: "0px" }}>
             PERSONAL PROJECTS
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_title_1']}</span> / {config.styledUserInfo['project_role_1']}
-          <span style={{ float: "right" }}>{config.styledUserInfo['project_start_day_1']} - {config.styledUserInfo['project_end_day_1']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_title']}</span> / {config.styledUserInfo['project_1_role']}
+          <span style={{ float: "right" }}>{config.styledUserInfo['project_1_start_day']} - {config.styledUserInfo['project_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_1_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_3']}</li>
           </ul>
           {/* <div style={{ height: "5px" }}/> */}
           <br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_title_2']}</span> / {config.styledUserInfo['project_role_2']}
-          <span style={{ float: "right" }}>{config.styledUserInfo['project_start_day_2']} - {config.styledUserInfo['project_end_day_2']}</span>
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_title']}</span> / {config.styledUserInfo['project_2_role']}
+          <span style={{ float: "right" }}>{config.styledUserInfo['project_2_start_day']} - {config.styledUserInfo['project_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0" }}>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_1']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_2']}</li>
-            <li style={config.listConfig}>{config.styledUserInfo['project_bullet_2_3']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_1']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_2']}</li>
+            <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_3']}</li>
           </ul><br/>
 
           <h4 style={{ fontSize: config.headingFontSize, fontWeight: config.boldFontWeight, margin: "0px", marginBottom: "0px" }}>
@@ -227,7 +227,7 @@ export const allTemplateInfo = {
       next: '2',
       prev: '2',
       tags: ['usa', 'computer science', 'engineering', 'no-color', 'single-column'],
-      fields: ["full_name","subtitle","city","state","phone_no","email_address","university_start_day","university_end_day","university","university_location","major","sample_courses_description","work_role_1","work_name_1","work_location_1","work_url_1","work_start_day_1","work_end_day_1","work_bullet_1_1","work_bullet_1_2","work_bullet_1_3","work_role_2","work_name_2","work_location_2","work_url_2","work_start_day_2","work_end_day_2","work_bullet_2_1","work_bullet_2_2","work_bullet_2_3","work_role_3","work_name_3","work_location_3","work_url_3","work_start_day_3","work_end_day_3","work_bullet_3_1","work_bullet_3_2","work_bullet_3_3","project_role_1","project_title_1","project_brief_description_1","project_url_1","project_start_day_1","project_end_day_1","project_bullet_1_1","project_bullet_1_2","project_bullet_1_3","project_role_2","project_title_2","project_brief_description_2","project_url_2","project_start_day_2","project_end_day_2","project_bullet_2_1","project_bullet_2_2","project_bullet_2_3","project_role_3","project_title_3","project_brief_description_3","project_url_3","project_start_day_3","project_end_day_3","project_bullet_3_1","project_bullet_3_2","project_bullet_3_3","technical_skills_description","spoken_languages_description","hobbies_description", "personal_url","github_url","linkedin_url"],
+      fields: ["full_name","subtitle","city","state","phone_no","email_address","university_start_day","university_end_day","university","university_location","major","sample_courses_description","work_1_role","work_1_name","work_1_location","work_1_url","work_1_start_day","work_1_end_day","work_1_bullet_1","work_1_bullet_2","work_1_bullet_3","work_2_role","work_2_name","work_2_location","work_2_url","work_2_start_day","work_2_end_day","work_2_bullet_1","work_2_bullet_2","work_2_bullet_3","work_3_role","work_3_name","work_3_location","work_3_url","work_3_start_day","work_3_end_day","work_3_bullet_1","work_3_bullet_2","work_3_bullet_3","project_1_role","project_1_title","project_1_brief_description","project_1_url","project_1_start_day","project_1_end_day","project_1_bullet_1","project_1_bullet_2","project_1_bullet_3","project_2_role","project_2_title","project_2_brief_description","project_2_url","project_2_start_day","project_2_end_day","project_2_bullet_1","project_2_bullet_2","project_2_bullet_3","project_3_role","project_3_title","project_3_brief_description","project_3_url","project_3_start_day","project_3_end_day","project_3_bullet_1","project_3_bullet_2","project_3_bullet_3","technical_skills_description","spoken_languages_description","hobbies_description", "personal_url","github_url","linkedin_url"],
     },
     defaultConfig: {
       pageHeight: '',
@@ -251,7 +251,7 @@ export const allTemplateInfo = {
       next: '1',
       prev: '1',
       tags: ['usa', 'computer science', 'engineering', 'single-column'],
-      fields: ["full_name","phone_no","email_address","university_start_day","university_end_day","university","university_location", "university_gpa","major","sample_courses_description","work_role_1","work_name_1","work_location_1","work_url_1","work_start_day_1","work_end_day_1","work_bullet_1_1","work_bullet_1_2","work_role_2","work_name_2","work_location_2","work_url_2","work_start_day_2","work_end_day_2","work_bullet_2_1","work_bullet_2_2","work_role_3","work_name_3","work_location_3","work_url_3","work_start_day_3","work_end_day_3","work_bullet_3_1","work_bullet_3_2","project_role_1","project_title_1","project_url_1","project_start_day_1","project_end_day_1","project_bullet_1_1","project_bullet_1_2","project_bullet_1_3","project_role_2","project_title_2","project_url_2","project_start_day_2","project_end_day_2","project_bullet_2_1","project_bullet_2_2","project_bullet_2_3", "activity_1_title", "activity_1_role", "activity_1_start_day", "activity_1_end_day", "activity_1_bullet_1", "activity_1_bullet_2", "activity_1_bullet_3", "award_1_title", "award_1_description", "award_1_day", "award_2_title", "award_2_description", "award_2_day", "award_3_title", "award_3_description", "award_3_day", "award_4_title", "award_4_description", "award_4_day", "technical_skills_description", "personal_url","github_url","linkedin_url"],
+      fields: ["full_name","phone_no","email_address","university_start_day","university_end_day","university","university_location", "university_gpa","major","sample_courses_description","work_1_role","work_1_name","work_1_location","work_1_start_day","work_1_end_day","work_1_bullet_1","work_1_bullet_2","work_2_role","work_2_name","work_2_location","work_2_start_day","work_2_end_day","work_2_bullet_1","work_2_bullet_2","work_3_role","work_3_name","work_3_location","work_3_start_day","work_3_end_day","work_3_bullet_1","work_3_bullet_2","project_1_role","project_1_title","project_1_url","project_1_start_day","project_1_end_day","project_1_bullet_1","project_1_bullet_2","project_1_bullet_3","project_2_role","project_2_title","project_2_url","project_2_start_day","project_2_end_day","project_2_bullet_1","project_2_bullet_2","project_2_bullet_3", "activity_1_title", "activity_1_role", "activity_1_start_day", "activity_1_end_day", "activity_1_bullet_1", "activity_1_bullet_2", "activity_1_bullet_3", "award_1_title", "award_1_description", "award_1_day", "award_2_title", "award_2_description", "award_2_day", "award_3_title", "award_3_description", "award_3_day", "award_4_title", "award_4_description", "award_4_day", "technical_skills_description", "personal_url","github_url","linkedin_url"],
     },
     defaultConfig: {
       pageHeight: '',
