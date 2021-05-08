@@ -10,7 +10,8 @@ export const Mheader: React.FC<MheaderProps> = (props) => {
   const pageDescriptions = {
     Home: "Create beautiful resumes that capture the attention of hiring managers with Resuville's easy to use Resume Builder. Just enter your information to start!",
     Browse: 'Browse through the several unique resume templates available on Resuville.',
-    Profile: 'View your profile, your saved data and settings on Resuville.'
+    Profile: 'View your profile, your saved data and settings on Resuville.',
+    Templates: 'Modify and use our unique resume templates for free.'
   };
   const titleDescriptions = {
     Home: 'Free & Easy Resume Building Tool',

@@ -10,11 +10,6 @@ import { ConfigInputsProps } from './interfaces';
 const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
   return (
     <Collapse shadow title="Template Settings" subtitle="Further customize your template">
-      <Button size="small" type="secondary" onClick={() => props.updateConfig(allTemplateInfo[props.templateId].defaultConfig)}>
-        Reset Settings
-      </Button>
-      <br />
-      <br />
       <div className="variable-inputs-container">
         <div>
           <span className="variable-label">Regular Font:</span>
@@ -55,24 +50,27 @@ const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
           </Select>
         </div>
       </div>
-      <Divider volume={20} y={3}>ADVANCED SETTINGS</Divider>
-      <Note>The following settings are by default set to industry standards, try not to change them.</Note><br/>
+      <Divider volume={20} y={3}>
+        ADVANCED SETTINGS
+      </Divider>
+      <Note>The following settings are by default set to industry standards, try not to change them.</Note>
+      <br />
       <div className="variable-inputs-container">
         <div>
           <span className="variable-label">Background Color:</span>
-          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('backgroundColor', e.target.value)}></Input>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: '25px' }} onChange={(e) => props.updateConfig('backgroundColor', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Text Color:</span>
-          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('textColor', e.target.value)}></Input>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: '25px' }} onChange={(e) => props.updateConfig('textColor', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Heading Color:</span>
-          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('headingColor', e.target.value)}></Input>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: '25px' }} onChange={(e) => props.updateConfig('headingColor', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Link Color:</span>
-          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('linkColor', e.target.value)}></Input>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: '25px' }} onChange={(e) => props.updateConfig('linkColor', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Page Height:</span>

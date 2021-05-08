@@ -14,7 +14,7 @@ const Home = (): React.ReactNode => {
       <Page>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '100px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'end' }}>
-            <Image className="logo-img" style={{ margin: '0px' }} src="/logo.svg" width={200}></Image>
+            <Image className="logo-img" style={{ margin: '0px' }} src="/logo.svg" width={200} alt=""></Image>
             <div style={{ margin: '0', paddingLeft: '30px', fontSize: '34px', lineHeight: '34px', fontWeight: 'bolder', textAlign: 'center', fontFamily: `"Times New Roman", Times, monospaced` }}>
               <div>E</div>
               <div>S</div>
@@ -52,7 +52,7 @@ const Home = (): React.ReactNode => {
         <br />
         <br />
         <Image.Browser url="https://resuville.com/t/1" showFullLink invert>
-          <Image width={540} height={260} style={{ objectFit: 'cover' }} src="/img/get_started.png" />
+          <Image width={540} height={260} style={{ objectFit: 'cover' }} src="/img/get_started.png" alt="" />
         </Image.Browser>
         <br />
         <br />

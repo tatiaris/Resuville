@@ -42,12 +42,14 @@ export const Template = () => {
    * When userInfo is loaded, update all field values
    */
   useEffect(() => {
-    setFieldInputs(templateInfo.fields.map((fName, i) => (
-      <div key={`req-field-inp-key-${i}`} className="req-field-inp-container">
-        <Input key={`req-field-${i}`} name={fName} placeholder={fName} initialValue={userInfo[fName]} onChange={(e) => updateUserInfoField(e)} />
-        <span className="req-field-title">{fName}</span>
-      </div>
-    )));
+    setFieldInputs(
+      templateInfo.fields.map((fName, i) => (
+        <div key={`req-field-inp-key-${i}`} className="req-field-inp-container">
+          <Input key={`req-field-${i}`} name={fName} placeholder={fName} initialValue={userInfo[fName]} onChange={(e) => updateUserInfoField(e)} />
+          <span className="req-field-title">{fName}</span>
+        </div>
+      ))
+    );
     updateConfig('userInfo', userInfo);
   }, [userInfo]);
 
@@ -62,16 +64,18 @@ export const Template = () => {
   }, [templateId]);
 
   const calculatePageScale = () => {
-    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > config.pageWidth + 60) ? setResumePageScale(1) : setResumePageScale((document.getElementsByTagName('html')[0].clientWidth - 60)/config.pageWidth);
-  }
+    typeof document !== 'undefined' && document.getElementsByTagName('html')[0].clientWidth > config.pageWidth + 60
+      ? setResumePageScale(1)
+      : setResumePageScale((document.getElementsByTagName('html')[0].clientWidth - 60) / config.pageWidth);
+  };
   useEffect(() => {
     if (window) window.onresize = calculatePageScale;
     if (document) calculatePageScale();
-  }, [])
+  }, []);
 
   return (
     <>
-      <Mheader title="Templates"/>
+      <Mheader title="Templates" />
       <Mnavbar theme="light" page="Other" />
       <Page className="template-page">
         <div className="all-inputs-container">
@@ -79,16 +83,22 @@ export const Template = () => {
           <br />
           <Collapse shadow initialVisible={true} title="Your Profile Data" subtitle="Change to update the template">
             {session && (
-              <><Button size="small" type="secondary" onClick={() => updateUserDataDB(allUserData, userInfo, setToast)}>Save Profile</Button><br/><br/></>
+              <>
+                <Button size="small" name="save-profile" type="secondary" onClick={() => updateUserDataDB(allUserData, userInfo, setToast)}>
+                  Save Profile
+                </Button>
+                <br />
+                <br />
+              </>
             )}
             <div className="field-inputs-container">{fieldInputs}</div>
           </Collapse>
         </div>
-        <div style={{ width: "100%" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ width: '100%' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div className="flex-wrap-container">
-              {allUserData['_id'] == "guest" ? (
-                <Button onClick={() => signIn('auth0')} iconRight={<Heart />} auto size="small">
+              {allUserData['_id'] == 'guest' ? (
+                <Button onClick={() => signIn('auth0')} iconRight={<Heart />} name="like-template-signin" auto size="small">
                   {templateDBInfo['likes']}
                 </Button>
               ) : Object.keys(allUserData).length > 0 && templateId in allUserData['liked_templates'] ? (
@@ -96,11 +106,17 @@ export const Template = () => {
                   onClick={() => modifyFavoriteTemplates(false, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)}
                   iconRight={<HeartFill color="red" />}
                   auto
+                  name="unlike-template"
                   size="small">
                   {templateDBInfo['likes']}
                 </Button>
               ) : (
-                <Button onClick={() => modifyFavoriteTemplates(true, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)} iconRight={<Heart />} auto size="small">
+                <Button
+                  onClick={() => modifyFavoriteTemplates(true, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)}
+                  iconRight={<Heart />}
+                  name="like-template"
+                  auto
+                  size="small">
                   {templateDBInfo['likes']}
                 </Button>
               )}
@@ -109,23 +125,28 @@ export const Template = () => {
               </Tag>
             </div>
             <div className="flex-wrap-container">
-              <Button auto size="small" type="secondary" className="big-icon" onClick={() => loadNewTemplate(templateInfo.next, setTemplateInfo)} icon={<ArrowLeft />}></Button>
-              <Button auto size="small" type="secondary" className="big-icon" onClick={() => loadNewTemplate(templateInfo.prev, setTemplateInfo)} icon={<ArrowRight />}></Button>
+              <Button auto size="small" type="secondary" className="big-icon" name="next-template" onClick={() => loadNewTemplate(templateInfo.next, setTemplateInfo)} icon={<ArrowLeft />}></Button>
+              <Button
+                auto
+                size="small"
+                type="secondary"
+                className="big-icon"
+                name="previous-template"
+                onClick={() => loadNewTemplate(templateInfo.prev, setTemplateInfo)}
+                icon={<ArrowRight />}></Button>
             </div>
           </div>
           <br />
-          <div id="resume-page" style={{ scale: `${resumePageScale}`, transformOrigin: "top left" }}>
-            <div contentEditable={templateEdit}>
-              {getTemplate(templateId, config)}
-            </div>
+          <div id="resume-page" style={{ scale: `${resumePageScale}`, transformOrigin: 'top left' }}>
+            <div contentEditable={templateEdit}>{getTemplate(templateId, config)}</div>
             <DirectEditBtn templateEdit={templateEdit} setTemplateEdit={setTemplateEdit} />
           </div>
           <br />
           <div className="flex-wrap-container" style={{ justifyContent: 'right' }}>
-            <Button size="small" type="secondary" onClick={() => printPDF(templateDBInfo, setTemplateDBInfo, setToast)}>
+            <Button size="small" name="print-resume-pdf" type="secondary" onClick={() => printPDF(templateDBInfo, setTemplateDBInfo, setToast)}>
               Print PDF
             </Button>
-            <Button size="small" type="secondary" onClick={downloadHtml}>
+            <Button size="small" name="download-resume-html" type="secondary" onClick={downloadHtml}>
               Download HTML
             </Button>
           </div>
