@@ -4,7 +4,7 @@ const getSitemap = () => `<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://resuville.com/</loc>
-    <lastmod>2020-12-28</lastmod>
+    <lastmod>2021-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>

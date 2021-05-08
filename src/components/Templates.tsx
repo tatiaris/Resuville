@@ -116,9 +116,9 @@ const template2 = (config) => {
       display: "flex", flexDirection: "column", justifyContent: "center", fontWeight: config.regularFontWeight }}>
         <div style={{ textAlign: "left", width: "100%" }}>
           <div style={{ float: 'right', textAlign: 'right' }}>
-            {config.styledUserInfo['github_url']}
+            <a href={config.styledUserInfo['github_url']}>{config.styledUserInfo['github_url']}</a>
             <br/>
-            {config.styledUserInfo['linkedin_url']}
+            <a href={config.styledUserInfo['linkedin_url']}>{config.styledUserInfo['linkedin_url']}</a>
           </div>
           <div>
             <h3 style={{margin: "0px", fontWeight: config.boldFontWeight }}>{config.styledUserInfo['full_name']}</h3>
