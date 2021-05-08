@@ -19,7 +19,7 @@ export const template1 = (config) => {
           <span>{config.styledUserInfo['city']}, {config.styledUserInfo['state']} | {config.styledUserInfo['phone_no']} | {config.styledUserInfo['email_address']}</span>
         </div>
         <div style={{ width: "100%", textAlign: "left", paddingTop: "15px" }}>
-          <h4 style={{ borderBottom: "2px solid black", fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px" }}>
+          <h4 style={{ borderBottom: "2px solid black", fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px", color: config.headingColor }}>
             Education
           </h4>
           <span style={{ float: "right" }}>
@@ -32,21 +32,21 @@ export const template1 = (config) => {
           <h4 style={{ borderBottom: "2px solid black", fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px", color: config.headingColor }}>
             Professional Experience
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_role']}</span>, {config.styledUserInfo['work_1_name']}, {config.styledUserInfo['work_1_location']} (<a href={`https://${config.styledUserInfo['work_1_url']}`}>{config.styledUserInfo['work_1_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_role']}</span>, {config.styledUserInfo['work_1_name']}, {config.styledUserInfo['work_1_location']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['work_1_url']}`}>{config.styledUserInfo['work_1_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['work_1_start_day']} - {config.styledUserInfo['work_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_role']}</span>, {config.styledUserInfo['work_2_name']}, {config.styledUserInfo['work_2_location']} (<a href={`https://${config.styledUserInfo['work_2_url']}`}>{config.styledUserInfo['work_2_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_role']}</span>, {config.styledUserInfo['work_2_name']}, {config.styledUserInfo['work_2_location']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['work_2_url']}`}>{config.styledUserInfo['work_2_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['work_2_start_day']} - {config.styledUserInfo['work_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_role']}</span>, {config.styledUserInfo['work_3_name']}, {config.styledUserInfo['work_3_location']} (<a href={`https://${config.styledUserInfo['work_3_url']}`}>{config.styledUserInfo['work_3_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_role']}</span>, {config.styledUserInfo['work_3_name']}, {config.styledUserInfo['work_3_location']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['work_3_url']}`}>{config.styledUserInfo['work_3_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['work_3_start_day']} - {config.styledUserInfo['work_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_1']}</li>
@@ -57,21 +57,21 @@ export const template1 = (config) => {
           <h4 style={{ borderBottom: "2px solid black", fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, lineHeight: "1.2", margin: "0px", marginBottom: "10px", color: config.headingColor }}>
             Projects
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_role']}</span>, {config.styledUserInfo['project_1_title']}, {config.styledUserInfo['project_1_brief_description']} (<a href={`https://${config.styledUserInfo['project_1_url']}`}>{config.styledUserInfo['project_1_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_role']}</span>, {config.styledUserInfo['project_1_title']}, {config.styledUserInfo['project_1_brief_description']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['project_1_url']}`}>{config.styledUserInfo['project_1_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['project_1_start_day']} - {config.styledUserInfo['project_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_role']}</span>, {config.styledUserInfo['project_2_title']}, {config.styledUserInfo['project_2_brief_description']} (<a href={`https://${config.styledUserInfo['project_2_url']}`}>{config.styledUserInfo['project_2_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_role']}</span>, {config.styledUserInfo['project_2_title']}, {config.styledUserInfo['project_2_brief_description']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['project_2_url']}`}>{config.styledUserInfo['project_2_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['project_2_start_day']} - {config.styledUserInfo['project_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_role']}</span>, {config.styledUserInfo['project_3_title']}, {config.styledUserInfo['project_3_brief_description']} (<a href={`https://${config.styledUserInfo['project_3_url']}`}>{config.styledUserInfo['project_3_url']}</a>)
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_role']}</span>, {config.styledUserInfo['project_3_title']}, {config.styledUserInfo['project_3_brief_description']} (<a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['project_3_url']}`}>{config.styledUserInfo['project_3_url']}</a>)
           <span style={{ float: "right" }}>{config.styledUserInfo['project_3_start_day']} - {config.styledUserInfo['project_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['project_3_bullet_1']}</li>
