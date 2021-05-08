@@ -9,15 +9,14 @@ import PropTypes from 'prop-types';
 export const Mheader: React.FC<MheaderProps> = (props) => {
   const pageDescriptions = {
     Home: "Create beautiful resumes that capture the attention of hiring managers with Resuville's easy to use Resume Builder. Just enter your information to start!",
-    Browse: 'Browse through the several tried, trusted, unique, and beautifully designed resume templates available on Resuville.',
-    Design: 'Design and contribute to the Resuville community by writing and submitting the html and css code for your unique resume template!',
+    Browse: 'Browse through the several unique resume templates available on Resuville.',
     Profile: 'View your profile, your saved data and settings on Resuville.'
   };
   const titleDescriptions = {
     Home: 'Free & Easy Resume Building Tool',
-    Browse: 'Browse through our templates',
-    Design: 'Design your own template',
-    Profile: 'View your profile and change your settings'
+    Browse: 'Browse',
+    Profile: 'Profile',
+    Templates: 'Templates'
   };
   return (
     <Head>

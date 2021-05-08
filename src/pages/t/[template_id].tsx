@@ -10,6 +10,7 @@ import ConfigInputs from '../../components/ConfigInputs';
 import { ArrowLeft, ArrowRight, Edit, Heart, HeartFill, Save } from '@geist-ui/react-icons';
 import { defaultTemplateAbout, defaultTemplateConfig, defaultTemplateDBInfo } from '../../components/Constants';
 import { DirectEditBtn } from '../../components/DirectEditBtn';
+import { Mheader } from '../../components/Mheader';
 
 export const Template = () => {
   const router = useRouter();
@@ -42,7 +43,7 @@ export const Template = () => {
    */
   useEffect(() => {
     setFieldInputs(templateInfo.fields.map((fName, i) => (
-      <div className="req-field-inp-container">
+      <div key={`req-field-inp-key-${i}`} className="req-field-inp-container">
         <Input key={`req-field-${i}`} name={fName} placeholder={fName} initialValue={userInfo[fName]} onChange={(e) => updateUserInfoField(e)} />
         <span className="req-field-title">{fName}</span>
       </div>
@@ -55,14 +56,13 @@ export const Template = () => {
   }, [template_id]);
 
   useEffect(() => {
-    console.log('setting templateInfo', templateId);
     setTemplateInfo(allTemplateInfo[templateId].about);
     setConfig(allTemplateInfo[templateId].defaultConfig);
     loadDBTemplateData(templateId, setTemplateDBInfo);
   }, [templateId]);
 
   const calculatePageScale = () => {
-    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > 1090) ? setResumePageScale(1) : setResumePageScale((document.getElementsByTagName('html')[0].clientWidth - 60)/1030);
+    (typeof document !== "undefined" && document.getElementsByTagName('html')[0].clientWidth > config.pageWidth + 60) ? setResumePageScale(1) : setResumePageScale((document.getElementsByTagName('html')[0].clientWidth - 60)/config.pageWidth);
   }
   useEffect(() => {
     if (window) window.onresize = calculatePageScale;
@@ -71,10 +71,11 @@ export const Template = () => {
 
   return (
     <>
+      <Mheader title="Templates"/>
       <Mnavbar theme="light" page="Other" />
       <Page className="template-page">
         <div className="all-inputs-container">
-          <ConfigInputs config={config} updateConfig={updateConfig} />
+          <ConfigInputs config={config} updateConfig={updateConfig} templateId={`1`} />
           <br />
           <Collapse shadow initialVisible={true} title="Your Profile Data" subtitle="Change to update the template">
             {session && (
@@ -114,7 +115,7 @@ export const Template = () => {
           </div>
           <br />
           <div id="resume-page" style={{ scale: `${resumePageScale}`, transformOrigin: "top left" }}>
-            <div style={{ width: '1030px', maxHeight: '1327px' }} contentEditable={templateEdit}>
+            <div contentEditable={templateEdit}>
               {getTemplate(templateId, config)}
             </div>
             <DirectEditBtn templateEdit={templateEdit} setTemplateEdit={setTemplateEdit} />

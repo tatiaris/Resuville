@@ -1,6 +1,6 @@
 import React from 'react';
-import { Input, Page, Button, Collapse, Select } from '@geist-ui/react';
-import { fontFamilies } from './Templates';
+import { Input, Page, Button, Collapse, Select, Divider, Note } from '@geist-ui/react';
+import { allTemplateInfo, fontFamilies } from './Templates';
 import PropTypes from 'prop-types';
 import { ConfigInputsProps } from './interfaces';
 
@@ -8,11 +8,9 @@ import { ConfigInputsProps } from './interfaces';
  * Footer component
  */
 const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
-  const initialRegularFontSize = props.config.regularFontSize.substr(0, props.config.regularFontSize.length - 2);
-  const initialHeadingFontSize = props.config.headingFontSize.substr(0, props.config.headingFontSize.length - 2);
   return (
     <Collapse shadow title="Template Settings" subtitle="Further customize your template">
-      <Button size="small" type="secondary">
+      <Button size="small" type="secondary" onClick={() => props.updateConfig(allTemplateInfo[props.templateId].defaultConfig)}>
         Reset Settings
       </Button>
       <br />
@@ -30,11 +28,11 @@ const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
         </div>
         <div>
           <span className="variable-label">Regular Font Size:</span>
-          <Input placeholder="12" labelRight="pt" initialValue={initialRegularFontSize} onChange={(e) => props.updateConfig('regularFontSize', `${e.target.value}pt`)}></Input>
+          <Input placeholder="12" labelRight="pt" type="number" initialValue={`${props.config.regularFontSize}`} onChange={(e) => props.updateConfig('regularFontSize', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Heading Font Size:</span>
-          <Input placeholder="16" labelRight="pt" initialValue={initialHeadingFontSize} onChange={(e) => props.updateConfig('headingFontSize', `${e.target.value}pt`)}></Input>
+          <Input placeholder="16" labelRight="pt" type="number" initialValue={`${props.config.headingFontSize}`} onChange={(e) => props.updateConfig('headingFontSize', e.target.value)}></Input>
         </div>
         <div>
           <span className="variable-label">Regular Font Weight:</span>
@@ -57,13 +55,50 @@ const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
           </Select>
         </div>
       </div>
+      <Divider volume={20} y={3}>ADVANCED SETTINGS</Divider>
+      <Note>The following settings are by default set to industry standards, try not to change them.</Note><br/>
+      <div className="variable-inputs-container">
+        <div>
+          <span className="variable-label">Background Color:</span>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('backgroundColor', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Text Color:</span>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('textColor', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Heading Color:</span>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('headingColor', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Link Color:</span>
+          <Input type="color" initialValue={props.config.linkColor} style={{ minWidth: "25px" }} onChange={(e) => props.updateConfig('linkColor', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Page Height:</span>
+          <Input placeholder="1327" labelRight="px" type="number" initialValue={`${props.config.pageHeight}`} onChange={(e) => props.updateConfig('pageHeight', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Page Width:</span>
+          <Input placeholder="1030" labelRight="px" type="number" initialValue={`${props.config.pageWidth}`} onChange={(e) => props.updateConfig('pageWidth', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Vertical Margin:</span>
+          <Input placeholder="48" labelRight="px" type="number" initialValue={`${props.config.verticalMargin}`} onChange={(e) => props.updateConfig('verticalMargin', e.target.value)}></Input>
+        </div>
+        <div>
+          <span className="variable-label">Horizontal Margin:</span>
+          <Input placeholder="48" labelRight="px" type="number" initialValue={`${props.config.horizontalMargin}`} onChange={(e) => props.updateConfig('horizontalMargin', e.target.value)}></Input>
+        </div>
+      </div>
     </Collapse>
   );
 };
 
 ConfigInputs.propTypes = {
   config: PropTypes.any.isRequired,
-  updateConfig: PropTypes.any.isRequired
+  updateConfig: PropTypes.any.isRequired,
+  templateId: PropTypes.string.isRequired
 };
 
 export default ConfigInputs;

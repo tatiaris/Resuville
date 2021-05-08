@@ -149,7 +149,7 @@ body {
   position: relative;
   background-color: white;
   box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
-  width: 1030px;
+  width: max-content;
   height: max-content;
 }
 .direct-edit-btn-container {

@@ -33,16 +33,21 @@ export interface ListStyleConfig {
 }
 
 export interface TemplateConfig {
-  pageHeight: string;
-  pageWidth: string;
-  verticalMargin: string;
-  horizontalMargin: string;
   regularFont: string;
-  regularFontSize: string;
+  regularFontSize: number;
   regularFontWeight: string;
   boldFontWeight: string;
   headingFont: string;
-  headingFontSize: string;
+  headingFontSize: number;
+  // ADVANCED SETTINGS
+  backgroundColor: string;
+  linkColor: string;
+  headingColor: string;
+  textColor: string;
+  pageHeight: number;
+  pageWidth: number;
+  verticalMargin: Number;
+  horizontalMargin: Number;
   listConfig: ListStyleConfig;
   userInfo: any;
 }
@@ -50,6 +55,7 @@ export interface TemplateConfig {
 export interface ConfigInputsProps {
   config: TemplateConfig;
   updateConfig: Function;
+  templateId: string;
 }
 
 export interface DirectEditBtnProps {

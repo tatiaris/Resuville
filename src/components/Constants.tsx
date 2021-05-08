@@ -355,16 +355,20 @@ export const defaultTemplateDBInfo = {
 }
 
 export const defaultTemplateConfig = {
-  pageHeight: '',
-  pageWidth: '',
-  verticalMargin: '',
-  horizontalMargin: '',
   regularFont: 'Roboto',
-  regularFontSize: '12pt',
+  regularFontSize: 12,
   regularFontWeight: '300',
   boldFontWeight: '500',
   headingFont: 'Roboto',
-  headingFontSize: '16pt',
+  headingFontSize: 16,
+  backgroundColor: '#fff',
+  linkColor: '#000',
+  headingColor: '#000',
+  textColor: '#000',
+  pageHeight: 1327,
+  pageWidth: 1030,
+  verticalMargin: 48,
+  horizontalMargin: 48,
   listConfig: { display: 'list-item', listStyleType: `"\\2014"`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
   userInfo: placeholderInfo
 }
