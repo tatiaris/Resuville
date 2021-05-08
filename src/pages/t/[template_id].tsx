@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { signIn, useSession } from 'next-auth/client';
 import { Mnavbar } from '../../components/Mnavbar';
 import { MFooter } from '../../components/MFooter';
-import { Input, Page, Button, useToasts, Collapse, Tag, Note } from '@geist-ui/react';
+import { Input, Page, Button, useToasts, Collapse, Tag, Tooltip } from '@geist-ui/react';
 import { updateUserDataDB, loadAllUserData, printPDF, downloadHtml, loadDBTemplateData, modifyFavoriteTemplates, loadNewTemplate } from '../../components/Helper';
 import { allTemplateInfo, getTemplate } from '../../components/Templates';
 import { useRouter } from 'next/router';
 import ConfigInputs from '../../components/ConfigInputs';
-import { ArrowLeft, ArrowRight, Heart, HeartFill } from '@geist-ui/react-icons';
+import { ArrowLeft, ArrowRight, Edit, Heart, HeartFill, Save } from '@geist-ui/react-icons';
 import { defaultTemplateAbout, defaultTemplateConfig, defaultTemplateDBInfo } from '../../components/Constants';
+import { DirectEditBtn } from '../../components/DirectEditBtn';
 
 export const Template = () => {
   const router = useRouter();
@@ -72,12 +73,8 @@ export const Template = () => {
           <br />
           <Collapse shadow initialVisible={true} title="Your Profile Data" subtitle="Change to update the template">
             {session && (
-              <Button size="small" type="secondary" onClick={() => updateUserDataDB(allUserData, userInfo, setToast)}>
-                Save Profile
-              </Button>
+              <><Button size="small" type="secondary" onClick={() => updateUserDataDB(allUserData, userInfo, setToast)}>Save Profile</Button><br/><br/></>
             )}
-            <br />
-            <br />
             <div className="field-inputs-container">{fieldInputs}</div>
           </Collapse>
         </div>
@@ -111,10 +108,11 @@ export const Template = () => {
             </div>
           </div>
           <br />
-          <div id="resume-page" style={{ background: 'white', boxShadow: '11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff', width: '1030px', height: 'max-content', scale: `${resumePageScale}`, transformOrigin: "top left" }}>
+          <div id="resume-page" style={{ scale: `${resumePageScale}`, transformOrigin: "top left" }}>
             <div style={{ width: '1030px', maxHeight: '1327px' }} contentEditable={templateEdit}>
               {getTemplate(templateId, config)}
             </div>
+            <DirectEditBtn templateEdit={templateEdit} setTemplateEdit={setTemplateEdit} />
           </div>
           <br />
           <div className="flex-wrap-container" style={{ justifyContent: 'right' }}>

@@ -51,3 +51,8 @@ export interface ConfigInputsProps {
   config: TemplateConfig;
   updateConfig: Function;
 }
+
+export interface DirectEditBtnProps {
+  templateEdit: boolean;
+  setTemplateEdit: Function;
+}

@@ -145,6 +145,25 @@ body {
 
 
 /* Template BEGIN */
+#resume-page {
+  position: relative;
+  background-color: white;
+  box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+  width: 1030px;
+  height: max-content;
+}
+.direct-edit-btn-container {
+  position: absolute;
+  top: 0;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+#geist-ui-tooltip .inner {
+  width: max-content;
+}
+
 #resume-container ul li::before {
 	content: none;
 }
