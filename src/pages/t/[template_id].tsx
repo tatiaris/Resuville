@@ -98,29 +98,27 @@ export const Template = () => {
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div className="flex-wrap-container">
               {allUserData['_id'] == 'guest' ? (
-                <Button onClick={() => signIn('auth0')} iconRight={<Heart />} name="like-template-signin" auto size="small">
-                  {templateDBInfo['likes']}
-                </Button>
+                <Button onClick={() => signIn('auth0')} type="error" ghost iconRight={<Heart />} name="like-template-signin" auto size="small"></Button>
               ) : Object.keys(allUserData).length > 0 && templateId in allUserData['liked_templates'] ? (
                 <Button
                   onClick={() => modifyFavoriteTemplates(false, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)}
-                  iconRight={<HeartFill color="red" />}
+                  type="error"
+                  ghost
+                  iconRight={<HeartFill />}
                   auto
                   name="unlike-template"
-                  size="small">
-                  {templateDBInfo['likes']}
-                </Button>
+                  size="small"></Button>
               ) : (
                 <Button
                   onClick={() => modifyFavoriteTemplates(true, templateId, allUserData, setAllUserData, templateDBInfo, setTemplateDBInfo, setToast)}
                   iconRight={<Heart />}
+                  type="error"
+                  ghost
                   name="like-template"
                   auto
-                  size="small">
-                  {templateDBInfo['likes']}
-                </Button>
+                  size="small"></Button>
               )}
-              <Tag type="lite" style={{ height: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.9rem' }}>
+              <Tag type="secondary" style={{ height: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.9rem', border: '1px solid #ddd' }}>
                 Downloads: {templateDBInfo['downloads']}
               </Tag>
             </div>
