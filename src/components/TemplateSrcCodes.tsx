@@ -160,7 +160,7 @@ export const template2 = (config) => {
           <h4 style={{ fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, margin: "0px", marginBottom: "0px", color: config.headingColor }}>
             PERSONAL PROJECTS
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_title']}</span> / {config.styledUserInfo['project_1_role']}
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_title']}</span> / {config.styledUserInfo['project_1_role']} / <i><a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['project_1_url']}`}>{config.styledUserInfo['project_1_url']}</a></i>
           <span style={{ float: "right" }}>{config.styledUserInfo['project_1_start_day']} - {config.styledUserInfo['project_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_1']}</li>
@@ -168,7 +168,7 @@ export const template2 = (config) => {
             <li style={config.listConfig}>{config.styledUserInfo['project_1_bullet_3']}</li>
           </ul>
           <br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_title']}</span> / {config.styledUserInfo['project_2_role']}
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_title']}</span> / {config.styledUserInfo['project_2_role']} / <i><a style={{ color: config.linkColor }} href={`https://${config.styledUserInfo['project_2_url']}`}>{config.styledUserInfo['project_2_url']}</a></i>
           <span style={{ float: "right" }}>{config.styledUserInfo['project_2_start_day']} - {config.styledUserInfo['project_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['project_2_bullet_1']}</li>
