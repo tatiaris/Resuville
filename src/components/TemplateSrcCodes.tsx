@@ -135,21 +135,21 @@ export const template2 = (config) => {
           <h4 style={{ fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, margin: "0px", marginBottom: "0px", color: config.headingColor }}>
             WORK EXPERIENCE
           </h4>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_name']}</span> / {config.styledUserInfo['work_1_role']}, {config.styledUserInfo['work_1_location']}
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_1_name']}</span> / {config.styledUserInfo['work_1_role']} / {config.styledUserInfo['work_1_location']}
           <span style={{ float: "right" }}>{config.styledUserInfo['work_1_start_day']} - {config.styledUserInfo['work_1_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_1_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_role']}</span>, {config.styledUserInfo['work_2_name']}, {config.styledUserInfo['work_2_location']}
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_2_name']}</span> / {config.styledUserInfo['work_2_role']} / {config.styledUserInfo['work_2_location']}
           <span style={{ float: "right" }}>{config.styledUserInfo['work_2_start_day']} - {config.styledUserInfo['work_2_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_1']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_2']}</li>
             <li style={config.listConfig}>{config.styledUserInfo['work_2_bullet_3']}</li>
           </ul><br/>
-          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_role']}</span>, {config.styledUserInfo['work_3_name']}, {config.styledUserInfo['work_3_location']}
+          <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['work_3_name']}</span> / {config.styledUserInfo['work_3_role']} / {config.styledUserInfo['work_3_location']}
           <span style={{ float: "right" }}>{config.styledUserInfo['work_3_start_day']} - {config.styledUserInfo['work_3_end_day']}</span>
           <ul style={{ marginTop: "0", marginBottom: "0", color: config.textColor }}>
             <li style={config.listConfig}>{config.styledUserInfo['work_3_bullet_1']}</li>
