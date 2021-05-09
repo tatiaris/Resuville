@@ -164,7 +164,7 @@ export const avatarInfo = {
   certifications_description: 'Air Temple Monk Certification',
   technical_skills_description: 'Firebending, Earthbending, Waterbending, Airbending, Energybending, Speed, Agility',
   spoken_languages_description: 'English, Chinese, Arabic, French, Hindi, Spanish'
-}
+};
 export const placeholderInfo = {
   first_name: 'FNAME',
   last_name: 'LNAME',
@@ -183,7 +183,7 @@ export const placeholderInfo = {
 
   objective:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim.',
-  
+
   university: 'Example Sample University',
   university_location: 'City name, State name',
   university_start_day: 'MMM YYYY',
@@ -215,24 +215,25 @@ export const placeholderInfo = {
   work_2_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   work_2_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   work_2_bullet_4: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-  work_3_name: "Company Name Three",
+  work_3_name: 'Company Name Three',
   work_3_url: 'companythree.com',
   work_3_location: 'City name, State name',
   work_3_start_day: 'MMM YYYY',
   work_3_end_day: 'MMM YYYY',
   work_3_role: 'Work Role Three',
   work_3_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-  work_3_bullet_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+  work_3_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   work_3_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   work_3_bullet_4: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-  
+
   project_1_title: 'Project Name One',
   project_1_url: 'projectone.com',
   project_1_start_day: 'MMM YYYY',
   project_1_end_day: 'MMM YYYY',
   project_1_role: 'Project Role 1',
   project_1_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  project_1_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  project_1_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   project_1_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_1_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_1_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
@@ -242,7 +243,8 @@ export const placeholderInfo = {
   project_2_end_day: 'MMM YYYY',
   project_2_role: 'Project Role 2',
   project_2_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  project_2_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  project_2_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   project_2_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_2_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_2_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
@@ -252,11 +254,12 @@ export const placeholderInfo = {
   project_3_end_day: 'MMM YYYY',
   project_3_role: 'Project Role 3',
   project_3_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  project_3_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  project_3_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   project_3_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_3_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   project_3_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-  
+
   activity_1_title: 'Organization Name One',
   activity_1_url: 'orgone.com',
   activity_1_location: 'City name, State name',
@@ -264,7 +267,8 @@ export const placeholderInfo = {
   activity_1_end_day: 'MMM YYYY',
   activity_1_role: 'Member',
   activity_1_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  activity_1_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  activity_1_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   activity_1_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_1_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_1_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
@@ -275,7 +279,8 @@ export const placeholderInfo = {
   activity_2_end_day: 'MMM YYYY',
   activity_2_role: 'Member',
   activity_2_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  activity_2_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  activity_2_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   activity_2_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_2_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_2_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
@@ -286,11 +291,12 @@ export const placeholderInfo = {
   activity_3_end_day: 'MMM YYYY',
   activity_3_role: 'Member',
   activity_3_brief_description: 'Lorem ipsum dolor sit amet consectetur',
-  activity_3_long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
+  activity_3_long_description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat. Nec dui nunc mattis enim. ',
   activity_3_bullet_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_3_bullet_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   activity_3_bullet_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-  
+
   programming_language_1: 'English',
   programming_language_2: 'Chinese',
   programming_language_3: 'Arabic',
@@ -318,7 +324,7 @@ export const placeholderInfo = {
   soft_skill_7: 'Bravery',
   soft_skill_8: 'Confidence',
   soft_skill_9: 'Hardwork',
-  
+
   award_1_title: 'AWARD TITLE ONE',
   award_1_description: 'Description for award one',
   award_1_day: 'MMM YYYY',
@@ -331,28 +337,104 @@ export const placeholderInfo = {
   award_4_title: 'AWARD TITLE FOUR',
   award_4_description: 'Description for award four',
   award_4_day: 'MMM YYYY',
-  
+
   certifications_description: 'Certification One, Certification 2, Certification 3',
   technical_skills_description: 'Tech Skill One, Tech Skill Two, Tech Skill 3, Tech Skill 4',
   spoken_languages_description: 'Spoken Language 1, Spoken Language 2',
-  hobbies_description: 'Hobby One, Hobby Two, Hobby Three, Hobby Four, Hobby Five',
-}
+  hobbies_description: 'Hobby One, Hobby Two, Hobby Three, Hobby Four, Hobby Five'
+};
 
 export const defaultTemplateAbout = {
-  designer: "tatiaris",
+  designer: 'tatiaris',
   next: '1',
   prev: '1',
   tags: [],
-  fields: ["full_name","subtitle","city","state","phone_no","email_address","university_start_day","university_end_day","university","university_location","major","sample_courses_description","work_1_role","work_1_name","work_1_location","work_1_url","work_1_start_day","work_1_end_day","work_1_bullet_1","work_1_bullet_2","work_1_bullet_3","work_2_role","work_2_name","work_2_location","work_2_url","work_2_start_day","work_2_end_day","work_2_bullet_1","work_2_bullet_2","work_2_bullet_3","work_3_role","work_3_name","work_3_location","work_3_url","work_3_start_day","work_3_end_day","work_3_bullet_1","work_3_bullet_2","work_3_bullet_3","project_1_role","project_1_title","project_1_brief_description","project_1_url","project_1_start_day","project_1_end_day","project_1_bullet_1","project_1_bullet_2","project_1_bullet_3","project_2_role","project_2_title","project_2_brief_description","project_2_url","project_2_start_day","project_2_end_day","project_2_bullet_1","project_2_bullet_2","project_2_bullet_3","project_3_role","project_3_title","project_3_brief_description","project_3_url","project_3_start_day","project_3_end_day","project_3_bullet_1","project_3_bullet_2","project_3_bullet_3","technical_skills_description","spoken_languages_description","hobbies_description", "personal_url_title", "personal_url", "github_url_title","github_url", "linkedin_url_title","linkedin_url"],
-}
+  fields: [
+    'full_name',
+    'subtitle',
+    'city',
+    'state',
+    'phone_no',
+    'email_address',
+    'university_start_day',
+    'university_end_day',
+    'university',
+    'university_location',
+    'major',
+    'sample_courses_description',
+    'work_1_role',
+    'work_1_name',
+    'work_1_location',
+    'work_1_url',
+    'work_1_start_day',
+    'work_1_end_day',
+    'work_1_bullet_1',
+    'work_1_bullet_2',
+    'work_1_bullet_3',
+    'work_2_role',
+    'work_2_name',
+    'work_2_location',
+    'work_2_url',
+    'work_2_start_day',
+    'work_2_end_day',
+    'work_2_bullet_1',
+    'work_2_bullet_2',
+    'work_2_bullet_3',
+    'work_3_role',
+    'work_3_name',
+    'work_3_location',
+    'work_3_url',
+    'work_3_start_day',
+    'work_3_end_day',
+    'work_3_bullet_1',
+    'work_3_bullet_2',
+    'work_3_bullet_3',
+    'project_1_role',
+    'project_1_title',
+    'project_1_brief_description',
+    'project_1_url',
+    'project_1_start_day',
+    'project_1_end_day',
+    'project_1_bullet_1',
+    'project_1_bullet_2',
+    'project_1_bullet_3',
+    'project_2_role',
+    'project_2_title',
+    'project_2_brief_description',
+    'project_2_url',
+    'project_2_start_day',
+    'project_2_end_day',
+    'project_2_bullet_1',
+    'project_2_bullet_2',
+    'project_2_bullet_3',
+    'project_3_role',
+    'project_3_title',
+    'project_3_brief_description',
+    'project_3_url',
+    'project_3_start_day',
+    'project_3_end_day',
+    'project_3_bullet_1',
+    'project_3_bullet_2',
+    'project_3_bullet_3',
+    'technical_skills_description',
+    'spoken_languages_description',
+    'hobbies_description',
+    'personal_url_title',
+    'personal_url',
+    'github_url_title',
+    'github_url',
+    'linkedin_url_title',
+    'linkedin_url'
+  ]
+};
 
 export const defaultTemplateDBInfo = {
-    "templateId": "1",
-    "designer":"tatiaris",
-    "likes": 0,
-    "downloads": 0,
-    "thumbnail":""
-}
+  templateId: '1',
+  designer: 'tatiaris',
+  likes: 0,
+  downloads: 0,
+  thumbnail: ''
+};
 
 export const defaultTemplateConfig = {
   regularFont: 'Roboto',
@@ -371,4 +453,6 @@ export const defaultTemplateConfig = {
   horizontalMargin: 48,
   listConfig: { display: 'list-item', listStyleType: `"\\2014"`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
   userInfo: placeholderInfo
-}
+};
+
+export const allTags = ['resume', 'cover-letter', 'usa', 'asia', 'engineering', 'law', 'business', '1-page', '2-page', '1-column', '2-column', 'color', 'no-color'];

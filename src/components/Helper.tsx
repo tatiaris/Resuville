@@ -1,4 +1,4 @@
-import { allTemplateInfo } from "./Templates";
+import { allTemplateInfo } from './Templates';
 
 /**
  * Style text based on identifiers:
@@ -125,9 +125,13 @@ export const loadAllUserData = async (templateInfo, setAllUserData, setUserInfo)
 
 export const loadAllDBTemplateData = async (setAllTemplateDBInfo) => {
   const res = await fetch(`/api/templates?amount=all`);
-  const allTemplateDBData = await res.json();
+  let allTemplateDBData = await res.json();
+  allTemplateDBData = allTemplateDBData.map((data) => {
+    data.tags = new Set(allTemplateInfo[data.templateId].about.tags);
+    return data;
+  });
   setAllTemplateDBInfo(allTemplateDBData);
-}
+};
 
 export const loadDBTemplateData = async (templateId, setTemplateDBInfo) => {
   const templateInfoRes = await fetch(`/api/templates?amount=single&filter=templateId&templateId=${templateId}`);
@@ -187,9 +191,27 @@ export const incrementTemplateDownloads = (templateDBInfo, setTemplateDBInfo, se
 
 export const loadNewTemplate = (templateId, setTemplateInfo) => {
   console.log(`loading new template ${templateId}`);
-  setTemplateInfo(allTemplateInfo[templateId].about)
+  setTemplateInfo(allTemplateInfo[templateId].about);
   window.location.replace(`/t/${templateId}`);
-}
+};
+
+export const isSubset = (setA, setB) => {
+  for (const elem of setB) {
+    if (!setA.has(elem)) {
+      return false;
+    }
+  }
+  return true;
+};
+
+export const hasNoCommon = (setA, setB) => {
+  for (const elem of setB) {
+    if (setA.has(elem)) {
+      return false;
+    }
+  }
+  return true;
+};
 
 /**
  * Generates and downloads the pdf created using the template output

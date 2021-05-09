@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { signIn, useSession } from 'next-auth/client';
 import { Mnavbar } from '../../components/Mnavbar';
 import { MFooter } from '../../components/MFooter';
-import { Input, Page, Button, useToasts, Collapse, Tag, Tooltip } from '@geist-ui/react';
+import { Input, Page, Button, useToasts, Collapse, Tag } from '@geist-ui/react';
 import { updateUserDataDB, loadAllUserData, printPDF, downloadHtml, loadDBTemplateData, modifyFavoriteTemplates, loadNewTemplate } from '../../components/Helper';
 import { allTemplateInfo, getTemplate } from '../../components/Templates';
 import { useRouter } from 'next/router';
 import ConfigInputs from '../../components/ConfigInputs';
-import { ArrowLeft, ArrowRight, Edit, Heart, HeartFill, Save } from '@geist-ui/react-icons';
+import { ArrowLeft, ArrowRight, Heart, HeartFill } from '@geist-ui/react-icons';
 import { defaultTemplateAbout, defaultTemplateConfig, defaultTemplateDBInfo } from '../../components/Constants';
 import { DirectEditBtn } from '../../components/DirectEditBtn';
 import { Mheader } from '../../components/Mheader';
@@ -125,7 +125,6 @@ export const Template = () => {
               </Tag>
             </div>
             <div className="flex-wrap-container">
-              <Button auto size="small" type="secondary" className="big-icon" name="next-template" onClick={() => loadNewTemplate(templateInfo.next, setTemplateInfo)} icon={<ArrowLeft />}></Button>
               <Button
                 auto
                 size="small"
@@ -133,8 +132,17 @@ export const Template = () => {
                 className="big-icon"
                 name="previous-template"
                 onClick={() => loadNewTemplate(templateInfo.prev, setTemplateInfo)}
-                icon={<ArrowRight />}></Button>
+                icon={<ArrowLeft />}></Button>
+              <Button auto size="small" type="secondary" className="big-icon" name="next-template" onClick={() => loadNewTemplate(templateInfo.next, setTemplateInfo)} icon={<ArrowRight />}></Button>
             </div>
+          </div>
+          <br />
+          <div className="template-tags-container">
+            {templateInfo.tags.map((tag, i) => (
+              <a key={`template-tag-${i}`} target="_blank" rel="noopener noreferrer" href={`/search?yes=resume,${tag}`}>
+                <Tag type="lite">{tag}</Tag>
+              </a>
+            ))}
           </div>
           <br />
           <div id="resume-page" style={{ scale: `${resumePageScale}`, transformOrigin: 'top left' }}>

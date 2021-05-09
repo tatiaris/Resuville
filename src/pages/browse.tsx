@@ -16,13 +16,18 @@ const Browse = (): React.ReactNode => {
   if (allTemplateDBInfo.length > 0) {
     templateCollection = allTemplateDBInfo.map((tp, i) => (
       <div key={`tp-card-${i}`} className="tp-thumbnail-container">
-        <div><a href={`/t/${tp.templateId}`}><img className="tp-thumbnail-img" src={tp.thumbnail} width={250}/></a></div>
+        <div>
+          <a href={`/t/${tp.templateId}`}>
+            <img className="tp-thumbnail-img" alt="" src={tp.thumbnail} width={250} />
+          </a>
+        </div>
         <div className="tp-stats-container">
           <Badge.Anchor placement="bottomRight">
             <Badge size="mini">{tp.likes}</Badge>
             <HeartFill color="red" />
           </Badge.Anchor>
-          <br/><br/>
+          <br />
+          <br />
           <Badge.Anchor placement="bottomRight">
             <Badge size="mini">{tp.downloads}</Badge>
             <Download color="black" />
@@ -31,8 +36,10 @@ const Browse = (): React.ReactNode => {
       </div>
     ));
   }
-  
-  useEffect(() => {loadAllDBTemplateData(setAllTemplateDBInfo);}, [])
+
+  useEffect(() => {
+    loadAllDBTemplateData(setAllTemplateDBInfo);
+  }, []);
 
   return (
     <>
@@ -41,10 +48,8 @@ const Browse = (): React.ReactNode => {
       <Page>
         <h2>Popular Templates</h2>
         <h3>Resume</h3>
-        <div className="template-collection-container">
-          {templateCollection}
-        </div>
-        <br/>
+        <div className="template-collection-container">{templateCollection}</div>
+        <br />
         <h3>Cover Letter</h3>
         <Note type="secondary">Coming Soon</Note>
       </Page>

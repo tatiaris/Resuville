@@ -14,7 +14,7 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
   const pageType = {
     Home: '',
     Browse: '',
-    Design: '',
+    Search: '',
     Other: ''
   };
 
@@ -35,6 +35,9 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
             </Link>
             <Link className={pageType['Browse']} href="/browse" block>
               Browse
+            </Link>
+            <Link className={pageType['Search']} href="/search" block>
+              Search
             </Link>
           </div>
         </div>
@@ -63,6 +66,7 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
               </ButtonDropdown.Item>
               <ButtonDropdown.Item onClick={() => navigatePath('/')}>Home</ButtonDropdown.Item>
               <ButtonDropdown.Item onClick={() => navigatePath('/browse')}>Browse</ButtonDropdown.Item>
+              <ButtonDropdown.Item onClick={() => navigatePath('/search')}>Search</ButtonDropdown.Item>
             </ButtonDropdown>
           </div>
         </div>
