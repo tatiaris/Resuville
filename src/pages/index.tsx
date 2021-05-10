@@ -74,7 +74,7 @@ const Home = (): React.ReactNode => {
         <Divider />
         <h3>Donate</h3>
         Resuville currently has no ads and is free to use. Any donations would significantly help keep the website running. If you&apos;d like to support this project, please{' '}
-        <Link href="https://buymeacoffee.com/tatiaris" target="_blank" rel="noopener noreferrer" color>
+        <Link href="https://account.venmo.com/u/tatiaris" target="_blank" rel="noopener noreferrer" color>
           buy me a coffee
         </Link>
         !
