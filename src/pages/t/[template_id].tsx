@@ -94,7 +94,7 @@ export const Template = () => {
             <div className="field-inputs-container">{fieldInputs}</div>
           </Collapse>
         </div>
-        <div style={{ width: '100%' }}>
+        <div className="sticky-resume-page-container">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div className="flex-wrap-container">
               {allUserData['_id'] == 'guest' ? (
