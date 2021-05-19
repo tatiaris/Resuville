@@ -8,7 +8,8 @@ import { Menu } from '@geist-ui/react-icons';
 /**
  * Mnavbar component
  */
-export const Mnavbar: React.FC<MnavbarProps> = (props) => {
+
+export const Mnavbar: React.FC<MnavbarProps> = (props): React.ReactElement => {
   const [session, loading] = useSession();
 
   const pageType = {

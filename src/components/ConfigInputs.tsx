@@ -5,9 +5,15 @@ import PropTypes from 'prop-types';
 import { ConfigInputsProps } from './interfaces';
 
 /**
- * Footer component
+ * Config Inputs component
  */
 const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
+  const handleListConfig = (key, value) => {
+    const curListConfig = JSON.parse(JSON.stringify(props.config.listConfig));
+    curListConfig[key] = value;
+    props.updateConfig('listConfig', curListConfig);
+  };
+
   return (
     <Collapse shadow title="Template Settings" subtitle="Further customize your template">
       <div className="variable-inputs-container">
@@ -47,6 +53,16 @@ const ConfigInputs: React.FC<ConfigInputsProps> = (props) => {
             <Select.Option value="500">500</Select.Option>
             <Select.Option value="600">600</Select.Option>
             <Select.Option value="700">700</Select.Option>
+          </Select>
+        </div>
+        <div>
+          <span className="variable-label">Bullet Type:</span>
+          <Select placeholder="Bullet Type" initialValue={props.config.listConfig.listStyleType} onChange={(v) => handleListConfig('listStyleType', v)}>
+            <Select.Option value="disc">Disc</Select.Option>
+            <Select.Option value="circle">Circle</Select.Option>
+            <Select.Option value="square">Square</Select.Option>
+            <Select.Option value={`"\\2014"`}>Line</Select.Option>
+            <Select.Option value="disclosure-closed">Triangle</Select.Option>
           </Select>
         </div>
       </div>

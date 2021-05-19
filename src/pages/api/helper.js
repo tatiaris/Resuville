@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../../util/mongodb";
+import { connectToDatabase } from '../../../util/mongodb';
 
 export const findOneObject = async (collection, params) => {
   const { db } = await connectToDatabase();
@@ -22,4 +22,8 @@ export const getAllObjects = async (collection) => {
   const { db } = await connectToDatabase();
   const returnObj = await db.collection(collection).find().toArray();
   return returnObj;
-}
+};
+
+export const deleteObject = async (collection, params) => {
+  // deletes an object from collection based on params
+};

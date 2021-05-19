@@ -81,7 +81,7 @@ export const Template = () => {
         <div className="all-inputs-container">
           <ConfigInputs config={config} updateConfig={updateConfig} templateId={`1`} />
           <br />
-          <Collapse shadow initialVisible={true} title="Your Profile Data" subtitle="Change to update the template">
+          <Collapse shadow initialVisible={false} title="Your Profile Data" subtitle="Change to update the template">
             {session && (
               <>
                 <Button size="small" name="save-profile" type="secondary" onClick={() => updateUserDataDB(allUserData, userInfo, setToast)}>

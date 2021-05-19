@@ -106,7 +106,7 @@ export const allTemplateInfo = {
       linkColor: '#000',
       headingColor: '#000',
       textColor: '#000',
-      listConfig: { display: 'list-item', listStyleType: `"\\2014"`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
+      listConfig: { listStyleType: `"\\2014"`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
       userInfo: {}
     },
     getCode: TSC.template1
@@ -212,7 +212,7 @@ export const allTemplateInfo = {
       linkColor: '#000',
       headingColor: '#000',
       textColor: '#000',
-      listConfig: { display: 'list-item', paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
+      listConfig: { listStyleType: `circle`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
       userInfo: {}
     },
     getCode: TSC.template2
