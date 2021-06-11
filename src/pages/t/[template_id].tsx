@@ -35,7 +35,9 @@ export const Template = () => {
    * when the template changes load all data accordingly
    */
   useEffect(() => {
+    console.log('here');
     loadAllUserData(templateInfo, setAllUserData, setUserInfo);
+    console.log('here then');
   }, [templateInfo]);
 
   /**
