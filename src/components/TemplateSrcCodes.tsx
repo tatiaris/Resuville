@@ -420,9 +420,11 @@ export const template3 = (config) => {
           </div>
           <span>
             {config.styledUserInfo['email_address']} / {config.styledUserInfo['phone_no']} /{' '}
-            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['personal_url']}`}>
-              {config.styledUserInfo['personal_url']}
-            </a>
+            <i>
+              <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['personal_url']}`}>
+                {config.styledUserInfo['personal_url']}
+              </a>
+            </i>
           </span>
         </div>
         <div style={{ width: '100%', textAlign: 'left', paddingTop: '15px' }}>

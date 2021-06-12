@@ -162,7 +162,7 @@ body {
   padding: 5px;
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 #geist-ui-tooltip .inner {
   width: max-content;
