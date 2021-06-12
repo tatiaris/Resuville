@@ -419,7 +419,10 @@ export const template3 = (config) => {
             <h3 style={{ margin: '0px', fontWeight: config.boldFontWeight, color: config.headingColor }}>{config.styledUserInfo['full_name']}</h3>
           </div>
           <span>
-            {config.styledUserInfo['email_address']} / {config.styledUserInfo['phone_no']}
+            {config.styledUserInfo['email_address']} / {config.styledUserInfo['phone_no']} /{' '}
+            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['personal_url']}`}>
+              {config.styledUserInfo['personal_url']}
+            </a>
           </span>
         </div>
         <div style={{ width: '100%', textAlign: 'left', paddingTop: '15px' }}>
