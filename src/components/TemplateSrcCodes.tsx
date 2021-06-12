@@ -420,11 +420,9 @@ export const template3 = (config) => {
           </div>
           <span>
             {config.styledUserInfo['email_address']} / {config.styledUserInfo['phone_no']} /{' '}
-            <i>
-              <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['personal_url']}`}>
-                {config.styledUserInfo['personal_url']}
-              </a>
-            </i>
+            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['personal_url']}`}>
+              {config.styledUserInfo['personal_url']}
+            </a>
           </span>
         </div>
         <div style={{ width: '100%', textAlign: 'left', paddingTop: '15px' }}>
@@ -487,11 +485,9 @@ export const template3 = (config) => {
           <br />
           <h4 style={{ fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, margin: '0px', marginBottom: '0px', color: config.headingColor }}>PROJECTS</h4>
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_1_title']}</span> / {config.styledUserInfo['project_1_role']} /{' '}
-          <i>
-            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_1_url']}`}>
-              {config.styledUserInfo['project_1_url']}
-            </a>
-          </i>
+          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_1_url']}`}>
+            {config.styledUserInfo['project_1_url']}
+          </a>
           <span style={{ float: 'right' }}>
             {config.styledUserInfo['project_1_start_day']} - {config.styledUserInfo['project_1_end_day']}
           </span>
@@ -502,11 +498,9 @@ export const template3 = (config) => {
           </ul>
           <br />
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_2_title']}</span> / {config.styledUserInfo['project_2_role']} /{' '}
-          <i>
-            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
-              {config.styledUserInfo['project_2_url']}
-            </a>
-          </i>
+          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
+            {config.styledUserInfo['project_2_url']}
+          </a>
           <span style={{ float: 'right' }}>
             {config.styledUserInfo['project_2_start_day']} - {config.styledUserInfo['project_2_end_day']}
           </span>
@@ -517,11 +511,9 @@ export const template3 = (config) => {
           </ul>
           <br />
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_title']}</span> / {config.styledUserInfo['project_3_role']} /{' '}
-          <i>
-            <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
-              {config.styledUserInfo['project_3_url']}
-            </a>
-          </i>
+          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
+            {config.styledUserInfo['project_3_url']}
+          </a>
           <span style={{ float: 'right' }}>
             {config.styledUserInfo['project_3_start_day']} - {config.styledUserInfo['project_3_end_day']}
           </span>
