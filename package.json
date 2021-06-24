@@ -16,7 +16,7 @@
     "@material-ui/icons": "4.11.2",
     "axios": "0.21.1",
     "body-parser": "1.19.0",
-    "bootstrap": "4.5.3",
+    "bootstrap": "5.0.2",
     "cheerio": "1.0.0-rc.5",
     "mongodb": "3.6.3",
     "next": "10.0.4",
