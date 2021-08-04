@@ -21,7 +21,7 @@
     "mongodb": "3.6.3",
     "next": "10.0.4",
     "next-auth": "3.11.2",
-    "next-connect": "0.9.1",
+    "next-connect": "0.10.2",
     "popper.js": "1.16.1",
     "prismjs": "1.23.0",
     "react": "16.13.1",
