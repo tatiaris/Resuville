@@ -20,7 +20,7 @@
     "cheerio": "1.0.0-rc.5",
     "mongodb": "3.6.3",
     "next": "10.0.4",
-    "next-auth": "3.11.2",
+    "next-auth": "3.29.0",
     "next-connect": "0.9.1",
     "popper.js": "1.16.1",
     "prismjs": "1.23.0",
