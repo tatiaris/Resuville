@@ -593,7 +593,7 @@ export const template4 = (config) => {
           <div style={{ float: 'right', textAlign: 'right' }}>
             {config.styledUserInfo['university_start_day']} - {config.styledUserInfo['university_end_day']}
             <br />
-            t4GPA: <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['university_gpa']}</span>
+            GPA: <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['university_gpa']}</span>
           </div>
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['university']}</span> / {config.styledUserInfo['university_location']}
           <br />
