@@ -18,7 +18,7 @@
     "body-parser": "1.19.0",
     "bootstrap": "5.0.2",
     "cheerio": "1.0.0-rc.5",
-    "mongodb": "3.6.3",
+    "mongodb": "3.7.1",
     "next": "10.0.4",
     "next-auth": "3.11.2",
     "next-connect": "0.9.1",
