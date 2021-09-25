@@ -577,7 +577,7 @@ export const template4 = (config) => {
             </a>
           </div>
           <div>
-            <h3 style={{ margin: '0px', fontWeight: config.boldFontWeight, color: config.headingColor }}>{config.styledUserInfo['full_name']}</h3>
+            <h2 style={{ margin: '0px', fontWeight: config.boldFontWeight, color: config.headingColor }}>{config.styledUserInfo['full_name']}</h2>
           </div>
           <span>
             {config.styledUserInfo['email_address']} / {config.styledUserInfo['phone_no']} /{' '}
