@@ -461,7 +461,7 @@ export const defaultTemplateConfig = {
   pageWidth: 1030,
   verticalMargin: 70,
   horizontalMargin: 70,
-  listConfig: { display: 'list-item', listStyleType: `disc`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
+  listConfig: { display: 'list-item', listStyleType: `disc`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
   userInfo: placeholderInfo
 };
 
