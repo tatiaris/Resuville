@@ -1,5 +1,6 @@
 import { styleText } from './Helper';
 import * as TSC from './TemplateSrcCodes';
+import { defaultTemplateConfig } from './Constants';
 
 export const fontFamilies = {
   Oswald: "'Oswald', sans-serif",
@@ -91,24 +92,7 @@ export const allTemplateInfo = {
         'linkedin_url'
       ]
     },
-    defaultConfig: {
-      pageHeight: 1327,
-      pageWidth: 1030,
-      verticalMargin: 48,
-      horizontalMargin: 48,
-      regularFont: 'Roboto',
-      regularFontSize: 12,
-      regularFontWeight: '300',
-      boldFontWeight: '500',
-      headingFont: 'Roboto',
-      headingFontSize: 16,
-      backgroundColor: '#fff',
-      linkColor: '#000',
-      headingColor: '#000',
-      textColor: '#000',
-      listConfig: { listStyleType: `"\\2014"`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.5' },
-      userInfo: {}
-    },
+    defaultConfig: defaultTemplateConfig,
     getCode: TSC.template1
   },
   '2': {
@@ -200,24 +184,7 @@ export const allTemplateInfo = {
         'linkedin_url'
       ]
     },
-    defaultConfig: {
-      pageHeight: 1327,
-      pageWidth: 1030,
-      verticalMargin: 48,
-      horizontalMargin: 48,
-      regularFont: 'Roboto',
-      regularFontSize: 13,
-      regularFontWeight: '300',
-      boldFontWeight: '500',
-      headingFont: 'Roboto',
-      headingFontSize: 15,
-      backgroundColor: '#fff',
-      linkColor: '#000',
-      headingColor: '#000',
-      textColor: '#000',
-      listConfig: { listStyleType: `circle`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
-      userInfo: {}
-    },
+    defaultConfig: defaultTemplateConfig,
     getCode: TSC.template2
   },
   '3': {
@@ -306,24 +273,7 @@ export const allTemplateInfo = {
         'linkedin_url'
       ]
     },
-    defaultConfig: {
-      pageHeight: 1327,
-      pageWidth: 1030,
-      verticalMargin: 48,
-      horizontalMargin: 48,
-      regularFont: 'Roboto',
-      regularFontSize: 13,
-      regularFontWeight: '300',
-      boldFontWeight: '500',
-      headingFont: 'Roboto',
-      headingFontSize: 15,
-      backgroundColor: '#fff',
-      linkColor: '#000',
-      headingColor: '#000',
-      textColor: '#000',
-      listConfig: { listStyleType: `circle`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
-      userInfo: {}
-    },
+    defaultConfig: defaultTemplateConfig,
     getCode: TSC.template3
   },
   '4': {
@@ -412,24 +362,7 @@ export const allTemplateInfo = {
         'linkedin_url'
       ]
     },
-    defaultConfig: {
-      pageHeight: 1327,
-      pageWidth: 1030,
-      verticalMargin: 48,
-      horizontalMargin: 48,
-      regularFont: 'Roboto',
-      regularFontSize: 13,
-      regularFontWeight: '300',
-      boldFontWeight: '500',
-      headingFont: 'Roboto',
-      headingFontSize: 15,
-      backgroundColor: '#fff',
-      linkColor: '#000',
-      headingColor: '#000',
-      textColor: '#000',
-      listConfig: { listStyleType: `circle`, paddingInlineStart: '1ch', marginBottom: '0', lineHeight: '1.2' },
-      userInfo: {}
-    },
+    defaultConfig: defaultTemplateConfig,
     getCode: TSC.template4
   }
 };
