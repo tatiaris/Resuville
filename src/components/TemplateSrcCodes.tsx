@@ -690,7 +690,7 @@ export const template4 = (config) => {
           </ul>
           <br />
           <h4 style={{ fontSize: `${config.headingFontSize}pt`, fontWeight: config.boldFontWeight, margin: '0px', color: config.headingColor, borderBottom: '2px solid black', marginBottom: '10px' }}>
-            ORGANIZATIONS
+            EXTRACURRICULAR
           </h4>
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['activity_1_title']}</span> / {config.styledUserInfo['activity_1_role']}
           <span style={{ float: 'right' }}>
