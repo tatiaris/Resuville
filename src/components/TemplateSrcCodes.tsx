@@ -511,7 +511,7 @@ export const template3 = (config) => {
           </ul>
           <br />
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_title']}</span> / {config.styledUserInfo['project_3_role']} /{' '}
-          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
+          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_3_url']}`}>
             {config.styledUserInfo['project_3_url']}
           </a>
           <span style={{ float: 'right' }}>
@@ -677,7 +677,7 @@ export const template4 = (config) => {
           </ul>
           <br />
           <span style={{ fontWeight: config.boldFontWeight }}>{config.styledUserInfo['project_3_title']}</span> / {config.styledUserInfo['project_3_role']} /{' '}
-          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_2_url']}`}>
+          <a style={{ color: config.linkColor }} target="_blank" rel="noopener noreferrer" href={`https://${config.userInfo['project_3_url']}`}>
             {config.styledUserInfo['project_3_url']}
           </a>
           <span style={{ float: 'right' }}>
